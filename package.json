@@ -1,0 +1,25 @@
+{
+    "name": "vsgenero",
+    "displayName": "VSGenero",
+    "description": "Support for the Genero programming language.",
+    "version": "0.0.1",
+    "engines": {
+        "vscode": "^1.36.0"
+    },
+    "categories": [
+        "Programming Languages"
+    ],
+    "contributes": {
+        "languages": [{
+            "id": "genero",
+            "aliases": ["Genero", "genero"],
+            "extensions": [".4gl",".per"],
+            "configuration": "./language-configuration.json"
+        }],
+        "grammars": [{
+            "language": "genero",
+            "scopeName": "source.4gl",
+            "path": "./syntaxes/genero.tmLanguage.json"
+        }]
+    }
+}
