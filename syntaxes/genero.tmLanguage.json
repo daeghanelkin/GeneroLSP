@@ -1,5 +1,4 @@
 {
-	"$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
 	"name": "Genero",
 	"patterns": [
 		{
@@ -7,25 +6,291 @@
 		},
 		{
 			"include": "#strings"
+		}, 
+		{ 
+			"include": "#comments"
+		},
+		{
+			"include": "#operators"
+		},
+		{
+			"include": "#numbers"
+		},
+		{
+			"include": "#datatypes"
+		},
+		{
+			"include": "#includes"
+		},
+		{
+			"include": "#imports"
+		},
+		{
+			"include": "#globals"
 		}
 	],
 	"repository": {
 		"keywords": {
 			"patterns": [{
-				"name": "keyword.control.genero",
+				"name": "keyword.control.4gl",
 				"match": "\\b(if|while|for|return)\\b"
 			}]
 		},
 		"strings": {
-			"name": "string.quoted.double.genero",
+			"name": "string.quoted.double.4gl",
 			"begin": "\"",
 			"end": "\"",
 			"patterns": [
 				{
-					"name": "constant.character.escape.genero",
+					"name": "constant.character.escape.4gl",
 					"match": "\\\\."
 				}
 			]
+		},
+		"comments": {
+			"patterns": [
+				{
+					"begin": "(^[ \\t]+)?(?=--)",
+					"beginCaptures": {
+						"1": {
+							"name": "punctuation.whitespace.comment.leading.4gl"
+						}
+					},
+					"end": "(?!\\G)",
+					"patterns": [
+						{
+							"begin": "--",
+							"beginCaptures": {
+								"0": {
+									"name": "punctuation.definition.comment.4gl"
+								}
+							},
+							"end": "\\n",
+							"name": "comment.line.double-dash.4gl"
+						}
+					]
+				},
+				{
+					"begin": "(^[ \\t]+)?(?=#)",
+					"beginCaptures": {
+						"1": {
+							"name": "punctuation.whitespace.comment.leading.4gl"
+						}
+					},
+					"end": "(?!\\G)",
+					"patterns": [
+						{
+							"begin": "#",
+							"beginCaptures": {
+								"0": {
+									"name": "punctuation.definition.comment.4gl"
+								}
+							},
+							"end": "\\n",
+							"name": "comment.line.numeral.4gl"
+						}
+					]
+				},
+				{
+					"begin": "(^[ \\t]+)?(?=#)",
+					"beginCaptures": {
+						"1": {
+							"name": "punctuation.whitespace.comment.leading.4gl"
+						}
+					},
+					"end": "(?!\\G)",
+					"patterns": []
+				},
+				{
+					"begin": "{",
+					"captures": {
+						"0": {
+							"name": "punctuation.definition.comment.4gl"
+						}
+					},
+					"end": "}",
+					"name": "comment.block.c"
+				}
+			]
+		},
+		"operators": {
+			"patterns": [
+				{
+					"comment": "Comparison Operators",
+					"name": "keyword.operator.comparison.4gl",
+					"match": "!=|<=|>=|==|<|>"
+				},
+				{
+					"comment": "Comparison Operators",
+					"name": "keyword.operator.comparison.4gl",
+					"match": "(?i)\\b(is null|like|matches|nvl|iif)\\b"
+				},
+				{
+					"comment": "Arithmetic Operators",
+					"name": "keyword.operator.arithmetic.4gl",
+					"match": "(?i)\\b(mod)\\b"
+				},
+				{
+					"comment": "Arithmetic Operators",
+					"name": "keyword.operator.arithmetic.4gl",
+					"match": "\\*|\\/|-|\\+|\\*\\*"
+				},
+				{
+					"comment": "Assignment Operators",
+					"name": "keyword.operator.assignment.4gl",
+					"match": "=|:="
+				},
+				{
+					"comment": "Boolean Operators",
+					"name": "keyword.operator.boolean.4gl",
+					"match": "(?i)\\b(and|or|not)\\b"
+				},
+				{
+					"comment": "Data type Operators",
+					"name": "keyword.operator.datatype.4gl",
+					"match": "(?i)\\b(cast|instanceof)\\b"
+				},
+				{
+					"comment": "Date and Time Operators",
+					"name": "keyword.operator.datetime.4gl",
+					"match": "(?i)\\b(current|extend|date|time|today|year|month|day|weekday|mdy|units)\\b"
+				},
+				{
+					"comment": "SQL Related Operators",
+					"name": "keyword.operator.sql.4gl",
+					"match": "(?i)\\b(sqlstate|sqlerrmessage)\\b"
+				},
+				{
+					"comment": "Dialog Handling Operators",
+					"name": "keyword.operator.dialog.4gl",
+					"match": "(?i)\\b(get_fldbuf|infield|field_touched)\\b"
+				}
+			]
+		},
+		"numbers": {
+			"begin": "(?<!\\w)(?=\\d|\\.\\d)",
+			"end": "(?!(?:['0-9a-zA-Z_\\.']|(?<=[eEpP])[+-]))",
+			"patterns": [
+				{
+					"match": "(\\G(?=[0-9.])(?!0[xXbB]))(?:([0-9](?:(?:[0-9]|((?<=[0-9a-fA-F])'(?=[0-9a-fA-F]))))*))?((?:(?<=[0-9])\\.|\\.(?=[0-9])))(?:([0-9](?:(?:[0-9]|((?<=[0-9a-fA-F])'(?=[0-9a-fA-F]))))*))?(?:((?<!')([eE])(\\+)?(\\-)?((?-mix:(?:[0-9](?:(?:[0-9]|(?:(?<=[0-9a-fA-F])'(?=[0-9a-fA-F]))))*)))))?(?:([lLfF](?!\\w)))?(?!(?:['0-9a-zA-Z_\\.']|(?<=[eEpP])[+-]))",
+					"captures": {
+						"2": {
+							"name": "constant.numeric.decimal.4gl",
+							"patterns": [
+								{
+									"match": "(?<=[0-9a-fA-F])'(?=[0-9a-fA-F])",
+									"name": "punctuation.separator.constant.numeric"
+								}
+							]
+						},
+						"3": {
+							"name": "punctuation.separator.constant.numeric"
+						},
+						"4": {
+							"name": "constant.numeric.decimal.point.4gl"
+						},
+						"5": {
+							"name": "constant.numeric.decimal.4gl",
+							"patterns": [
+								{
+									"match": "(?<=[0-9a-fA-F])'(?=[0-9a-fA-F])",
+									"name": "punctuation.separator.constant.numeric"
+								}
+							]
+						},
+						"6": {
+							"name": "punctuation.separator.constant.numeric"
+						},
+						"8": {
+							"name": "keyword.other.unit.exponent.decimal.4gl"
+						},
+						"9": {
+							"name": "keyword.operator.plus.exponent.decimal.4gl"
+						},
+						"10": {
+							"name": "keyword.operator.minus.exponent.decimal.4gl"
+						},
+						"11": {
+							"name": "constant.numeric.exponent.decimal.4gl",
+							"patterns": [
+								{
+									"match": "(?<=[0-9a-fA-F])'(?=[0-9a-fA-F])",
+									"name": "punctuation.separator.constant.numeric"
+								}
+							]
+						},
+						"12": {
+							"name": "keyword.other.unit.suffix.floating-point.4gl"
+						}
+					}
+				}
+			]
+		},
+		"datatypes": {
+			"patterns": [
+				{
+					"comment": "Data Types",
+					"name": "storage.type.4gl",
+					"match": "(?i)\\b(bigint|byte|boolean|char|date|datetime|decimal|float|int|integer|interval|money|smallfloat|smallint|string|tinyint|text|varchar)\\b"
+				}
+			]
+		},
+		"includes": {
+			"comment": "Include files",
+			"name": "meta.preprocessor.include.4gl",
+			"begin": "(?i)^\\s*&include\\s",
+			"beginCaptures": {
+				"0": {
+					"name": "keyword.control.directive.include.4gl"
+				}
+			},
+			"patterns": [
+				{
+					"include": "#strings"
+				}
+			],
+			"end": "$"
+		},
+		"imports": {
+			"comment": "Import files",
+			"name": "meta.preprocessor.import.4gl",
+			"match": "(?i)^\\s*(import)\\s((fgl\\s([a-z0-9_]+))|(java\\s([a-z0-9_]+))|([a-z0-9_]+))$",
+			"captures": {
+				"1": {
+					"name": "keyword.control.directive.import.4gl"
+				},
+				"3": {
+					"name": "keyword.control.directive.import.fgl.4gl"
+				},
+				"4": { 
+					"name": "keyword.control.directive.import.fgl.modulename.4gl"
+				},
+				"5": {
+					"name": "keyword.control.directive.import.java.4gl"
+				},
+				"6": { 
+					"name": "keyword.control.directive.import.fgl.classname.4gl"
+				},
+				"7": {
+					"name": "keyword.control.directive.import.c.libname.4gl"
+				}
+			}
+		},
+		"globals": {
+			"comment": "Globals",
+			"name": "meta.preprocessor.global.4gl",
+			"begin": "(?i)^\\s*globals\\s",
+			"beginCaptures": {
+				"0": {
+					"name": "keyword.control.directive.globals.4gl"
+				}
+			},
+			"patterns": [
+				{
+					"include": "#strings"
+				}
+			],
+			"end": "$"
 		}
 	},
 	"scopeName": "source.4gl"
