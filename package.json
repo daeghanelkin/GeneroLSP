@@ -20,6 +20,11 @@
             "language": "genero",
             "scopeName": "source.4gl",
             "path": "./syntaxes/genero.tmLanguage.json"
+        }],
+        "themes": [{
+            "label": "Genero Language: Dark",
+            "uiTheme": "vs-dark",
+            "path": "./Genero.tmTheme"
         }]
     }
 }
