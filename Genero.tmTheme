@@ -28,6 +28,51 @@
                 <string>#CE9178</string>
             </dict>
         </dict>
+        <dict>
+            <key>name</key>
+            <string>Comment</string>
+            <key>scope</key>
+            <string>comment</string>
+            <key>settings</key>
+            <dict>
+                <key>foreground</key>
+                <string>#6A9955</string>
+            </dict>
+        </dict>
+        <dict>
+            <key>name</key>
+            <string>Include</string>
+            <key>scope</key>
+            <string>keyword.control.directive.include.4gl</string>
+            <key>settings</key>
+            <dict>
+                <key>foreground</key>
+                <string>#C586C0</string>
+            </dict>
+        </dict>
+        <dict>
+            <key>name</key>
+            <string>Import</string>
+            <key>scope</key>
+            <string>keyword.control.directive.import.4gl</string>
+            <key>settings</key>
+            <dict>
+                <key>foreground</key>
+                <string>#C586C0</string>
+            </dict>
+        </dict>
+        <dict>
+            <key>name</key>
+            <string>Import</string>
+            <key>scope</key>
+            <string>keyword.control.directive.import.fgl.4gl</string>
+            <key>settings</key>
+            <dict>
+                <key>foreground</key>
+                <string>#88419A</string>
+            </dict>
+        </dict>
+
     </array>
 </dict>
 
