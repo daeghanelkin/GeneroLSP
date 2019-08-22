@@ -1,4 +1,8 @@
 {
+  "fileTypes": [
+    "4gl",
+    "4GL"
+  ],
   "name": "Genero",
   "patterns": [
     {

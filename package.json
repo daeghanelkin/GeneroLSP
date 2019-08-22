@@ -10,21 +10,53 @@
     "Programming Languages"
   ],
   "contributes": {
-    "languages": [{
-      "id": "genero",
-      "aliases": ["Genero", "genero"],
-      "extensions": [".4gl",".per"],
-      "configuration": "./language-configuration.json"
-    }],
-    "grammars": [{
-      "language": "genero",
-      "scopeName": "source.4gl",
-      "path": "./syntaxes/genero.tmLanguage.json"
-    }],
-    "themes": [{
-      "label": "Genero Language: Dark",
-      "uiTheme": "vs-dark",
-      "path": "./Genero.tmTheme.json"
-    }]
+    "languages": [
+      {
+        "id": "genero 4gl",
+        "aliases": [
+          "Genero 4GL", 
+          "genero 4gl",
+          "4gl",
+          "4GL"
+        ],
+        "extensions": [
+          ".4gl",
+          ".4GL"
+        ],
+        "configuration": "./language-configuration.json"
+      },
+      {
+        "id": "genero per",
+        "aliases": [
+          "Genero PER", 
+          "genero per",
+          "per",
+          "PER"
+        ],
+        "extensions": [
+          ".per",
+          ".PER"
+        ]
+      }
+    ],
+    "grammars": [
+      {
+        "language": "genero 4gl",
+        "scopeName": "source.4gl",
+        "path": "./syntaxes/Genero4GL.tmLanguage.json"
+      },
+      {
+        "language": "genero per",
+        "scopeName": "source.per",
+        "path": "./syntaxes/GeneroPER.tmLanguage.json"
+      }
+    ],
+    "themes": [
+      {
+        "label": "Genero Language: Dark",
+        "uiTheme": "vs-dark",
+        "path": "./Genero.tmTheme.json"
+      }
+    ]
   }
 }
