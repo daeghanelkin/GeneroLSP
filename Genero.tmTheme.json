@@ -2,7 +2,6 @@
   "name": "Genero Dark",
   "settings": [
     {
-      "name": "Storage Type",
       "scope": "storage.type.4gl",
       "settings": {
         "fontStyle": "italic",
@@ -10,45 +9,65 @@
       }
     },
     {
-      "name": "String",
       "scope": "string",
       "settings": {
         "foreground": "#CE9178"
       }
     },
     {
-      "name": "Comment",
       "scope": "comment",
       "settings": {
         "foreground": "#6A9955"
       }
     },
     {
-      "name": "Include",
       "scope": "keyword.control.directive.include.4gl",
       "settings": {
         "foreground": "#C586C0"
       }
     },
     {
-      "name": "Import",
       "scope": "keyword.control.directive.import.4gl",
       "settings": {
         "foreground": "#C586C0"
       }
     },
     {
-      "name": "Import",
       "scope": "keyword.control.directive.import.fgl.4gl",
       "settings": {
         "foreground": "#88419A"
       }
     },
     {
-      "name": "Number",
       "scope": "constant.numeric",
       "settings": {
         "foreground": "#B5CEA8"
+      }
+    },
+    {
+      "scope": "keyword.control.assignment.4gl",
+      "settings": {
+        "fontStyle": "italic",
+        "foreground": "#569CD6"
+      }
+    },
+    {
+      "scope": "constant",
+      "settings": {
+        "foreground": "#4EC9B0"
+      }
+    },
+    {
+      "scope": "storage.type.function.4gl",
+      "settings": {
+        "fontStyle": "italic",
+        "foreground": "#569CD6"
+      }
+    },
+    {
+      "scope": "entity.name.function.4gl",
+      "settings": {
+        "foreground": "#DCDCAA"
       }
     }
   ]

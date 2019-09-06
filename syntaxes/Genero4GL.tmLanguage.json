@@ -3,44 +3,58 @@
     "4gl",
     "4GL"
   ],
-  "name": "Genero",
+  "name": "Genero 4GL",
   "patterns": [
     {
-      "include": "#keywords"
+      "include": "#Keywords"
     },
     {
-      "include": "#strings"
-    }, 
-    { 
-      "include": "#comments"
+      "include": "#Strings"
     },
     {
-      "include": "#operators"
+      "include": "#Comments"
     },
     {
-      "include": "#numbers"
+      "include": "#Operators"
     },
     {
-      "include": "#datatypes"
+      "include": "#Numbers"
     },
     {
-      "include": "#includes"
+      "include": "#Datatypes"
     },
     {
-      "include": "#imports"
+      "include": "#Includes"
     },
     {
-      "include": "#globals"
+      "include": "#Imports"
+    },
+    {
+      "include": "#Globals"
+    },
+    {
+      "include": "#Constants"
+    },
+    {
+      "include": "#Functions"
     }
   ],
   "repository": {
-    "keywords": {
-      "patterns": [{
-        "name": "keyword.control.4gl",
-        "match": "\\b(if|while|for|return)\\b"
-      }]
+    "Keywords": {
+      "patterns": [
+        {
+          "comment": "General Keywords",
+          "name": "keyword.control.4gl",
+          "match": "(?i)\\b(if|while|for|return)\\b"
+        },
+        {
+          "comment": "Assignment Keyword",
+          "name": "keyword.control.assignment.4gl",
+          "match": "(?i)\\b(let)\\b"
+        }
+      ]
     },
-    "strings": {
+    "Strings": {
       "name": "string.quoted.double.4gl",
       "begin": "\"",
       "end": "\"",
@@ -51,7 +65,7 @@
         }
       ]
     },
-    "comments": {
+    "Comments": {
       "patterns": [
         {
           "begin": "(^[ \\t]+)?(?=--)",
@@ -117,7 +131,7 @@
         }
       ]
     },
-    "operators": {
+    "Operators": {
       "patterns": [
         {
           "comment": "Comparison Operators",
@@ -171,66 +185,32 @@
         }
       ]
     },
-    "numbers": {
-      "begin": "(?<!\\w)(?=\\d|\\.\\d)",
-      "end": "(?!(?:['0-9a-zA-Z_\\.']|(?<=[eEpP])[+-]))",
-      "patterns": [
-        {
-          "match": "(\\G(?=[0-9.])(?!0[xXbB]))(?:([0-9](?:(?:[0-9]|((?<=[0-9a-fA-F])'(?=[0-9a-fA-F]))))*))?((?:(?<=[0-9])\\.|\\.(?=[0-9])))(?:([0-9](?:(?:[0-9]|((?<=[0-9a-fA-F])'(?=[0-9a-fA-F]))))*))?(?:((?<!')([eE])(\\+)?(\\-)?((?-mix:(?:[0-9](?:(?:[0-9]|(?:(?<=[0-9a-fA-F])'(?=[0-9a-fA-F]))))*)))))?(?:([lLfF](?!\\w)))?(?!(?:['0-9a-zA-Z_\\.']|(?<=[eEpP])[+-]))",
-          "captures": {
-            "2": {
-              "name": "constant.numeric.decimal.4gl",
-              "patterns": [
-                {
-                  "match": "(?<=[0-9a-fA-F])'(?=[0-9a-fA-F])",
-                  "name": "punctuation.separator.constant.numeric"
-                }
-              ]
+    "Numbers": {
+      "comment": "Numbers",
+      "name": "constant.numeric.4gl",
+      "match": "([+-]?)(\\b\\d+|(\\.)\\d+)",
+      "captures": {
+        "1": {
+          "patterns": [
+            {
+              "comment": "Number Positive Sign",
+              "name": "keyword.operator.plus.decimal.4gl",
+              "match": "\\+"
             },
-            "3": {
-              "name": "punctuation.separator.constant.numeric"
-            },
-            "4": {
-              "name": "constant.numeric.decimal.point.4gl"
-            },
-            "5": {
-              "name": "constant.numeric.decimal.4gl",
-              "patterns": [
-                {
-                  "match": "(?<=[0-9a-fA-F])'(?=[0-9a-fA-F])",
-                  "name": "punctuation.separator.constant.numeric"
-                }
-              ]
-            },
-            "6": {
-              "name": "punctuation.separator.constant.numeric"
-            },
-            "8": {
-              "name": "keyword.other.unit.exponent.decimal.4gl"
-            },
-            "9": {
-              "name": "keyword.operator.plus.exponent.decimal.4gl"
-            },
-            "10": {
-              "name": "keyword.operator.minus.exponent.decimal.4gl"
-            },
-            "11": {
-              "name": "constant.numeric.exponent.decimal.4gl",
-              "patterns": [
-                {
-                  "match": "(?<=[0-9a-fA-F])'(?=[0-9a-fA-F])",
-                  "name": "punctuation.separator.constant.numeric"
-                }
-              ]
-            },
-            "12": {
-              "name": "keyword.other.unit.suffix.floating-point.4gl"
+            {
+              "comment": "Number Negative Sign",
+              "name": "keyword.operator.plus.decimal.4gl",
+              "match": "\\-"
             }
-          }
+          ]
+        },
+        "3": {
+          "comment": "Number Decimal Point",
+          "name": "constant.numeric.decimal.point"
         }
-      ]
+      }
     },
-    "datatypes": {
+    "Datatypes": {
       "patterns": [
         {
           "comment": "Data Types",
@@ -239,7 +219,7 @@
         }
       ]
     },
-    "includes": {
+    "Includes": {
       "comment": "Include files",
       "name": "meta.preprocessor.include.4gl",
       "begin": "(?i)^\\s*&include\\s",
@@ -250,12 +230,12 @@
       },
       "patterns": [
         {
-          "include": "#strings"
+          "include": "#Strings"
         }
       ],
       "end": "$"
     },
-    "imports": {
+    "Imports": {
       "comment": "Import files",
       "name": "meta.preprocessor.import.4gl",
       "match": "(?i)^\\s*(import)\\s((fgl\\s([a-z0-9_]+))|(java\\s([a-z0-9_]+))|([a-z0-9_]+))$",
@@ -266,13 +246,13 @@
         "3": {
           "name": "keyword.control.directive.import.fgl.4gl"
         },
-        "4": { 
+        "4": {
           "name": "keyword.control.directive.import.fgl.modulename.4gl"
         },
         "5": {
           "name": "keyword.control.directive.import.java.4gl"
         },
-        "6": { 
+        "6": {
           "name": "keyword.control.directive.import.fgl.classname.4gl"
         },
         "7": {
@@ -280,7 +260,7 @@
         }
       }
     },
-    "globals": {
+    "Globals": {
       "comment": "Globals",
       "name": "meta.preprocessor.global.4gl",
       "begin": "(?i)^\\s*globals\\s",
@@ -291,10 +271,54 @@
       },
       "patterns": [
         {
-          "include": "#strings"
+          "include": "#Strings"
         }
       ],
       "end": "$"
+    },
+    "Constants": {
+      "comment": "Constants",
+      "name": "constant.4gl",
+      "patterns": [
+        {
+          "comment": "Boolean Constants",
+          "name": "constant.boolean.4gl",
+          "match": "(?i)\\b(true|false)\\b"
+        },
+        {
+          "name": "constant.sqlca.4gl",
+          "match": "(?i)\\b(sqlca\\.sql(code|errm|errp|errd|awarn))\\b"
+        }
+      ]
+    },
+    "Functions": {
+      "name": "meta.function.4gl",
+      "begin": "(?i)^\\s*(public|private\\s+)?(function)\\s*([a-zA-Z0-9_]+)\\s*(\\()",
+      "beginCaptures": {
+        "1": {
+          "name": "storage.type.modifier.access.control.4gl"
+        },
+        "2": {
+          "name": "storage.type.function.4gl"
+        },
+        "3": {
+          "name": "entity.name.function.4gl"
+        }, 
+        "4": {
+          "name": "punctuation.section.parameters.begin.bracket.round.4gl"
+        }
+      },
+      "patterns": [
+        {
+          "include": "$base"
+        }
+      ],
+      "end": "(\\))",
+      "endCaptures": {
+        "1": {
+          "name": "punctuation.section.parameters.end.bracket.round.4gl"
+        }
+      }
     }
   },
   "scopeName": "source.4gl"
