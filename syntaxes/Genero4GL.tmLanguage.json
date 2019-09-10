@@ -293,6 +293,26 @@
     },
     "Functions": {
       "name": "meta.function.4gl",
+      "begin": "(?i)^\\s*((public|private)\\s+)?(function)\\s+([a-zA-Z0-9_]+\\s*(\\()([a-zA-Z0-9_, ]+)?(\\)))(\\s+(returns)\\s*(\\()?([a-zA-Z0-9_, ]+)(\\))?)?",
+      "beginCaptures": {
+        "3": {
+          "name": "storage.type.modifier.access.control.4gl"
+        },
+        "4": {
+          "name": "storage.type.function.4gl"
+        },
+        "5": {
+          "name": "entity.name.function.4gl"
+        } 
+      },
+      "patterns": [
+        {
+          "include": "$base"
+        }
+      ],
+      "end": "(?i)^(?:\\s*end\\s+(report|function|main))"
+    },
+    "FunctionInnards" : {
       "begin": "(?i)^\\s*(public|private\\s+)?(function)\\s*([a-zA-Z0-9_]+)\\s*(\\()",
       "beginCaptures": {
         "1": {
@@ -308,11 +328,6 @@
           "name": "punctuation.section.parameters.begin.bracket.round.4gl"
         }
       },
-      "patterns": [
-        {
-          "include": "$base"
-        }
-      ],
       "end": "(\\))",
       "endCaptures": {
         "1": {
