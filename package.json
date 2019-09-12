@@ -23,7 +23,7 @@
           ".4gl",
           ".4GL"
         ],
-        "configuration": "./language-configuration.json"
+        "configuration": "./syntaxes/language-configuration.json"
       },
       {
         "id": "genero per",
@@ -55,7 +55,7 @@
       {
         "label": "Genero Language: Dark",
         "uiTheme": "vs-dark",
-        "path": "./Genero.tmTheme.json"
+        "path": "./themes/Genero.tmTheme.json"
       }
     ],
     "configuration": {
