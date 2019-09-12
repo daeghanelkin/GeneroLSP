@@ -1,0 +1,2 @@
+# Ignore node installations
+**/node_modules
