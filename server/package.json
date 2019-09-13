@@ -1,5 +1,6 @@
 {
     "dependencies": {
+        "@types/node": "^12.7.5",
         "vscode-languageserver": "^5.2.1"
     }
 }

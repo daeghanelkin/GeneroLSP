@@ -1,6 +1,6 @@
 {
-  "name": "vsgenero",
-  "displayName": "VSGenero",
+  "name": "generolsp",
+  "displayName": "GeneroLSP",
   "description": "Support for the Genero programming language.",
   "version": "0.0.1",
   "engines": {
@@ -9,10 +9,11 @@
   "categories": [
     "Programming Languages"
   ],
+  "main": "./client/out/extension.js",
   "contributes": {
     "languages": [
       {
-        "id": "genero 4gl",
+        "id": "genero",
         "aliases": [
           "Genero 4GL",
           "genero 4gl",
@@ -41,7 +42,7 @@
     ],
     "grammars": [
       {
-        "language": "genero 4gl",
+        "language": "genero",
         "scopeName": "source.4gl",
         "path": "./syntaxes/Genero4GL.tmLanguage.json"
       },
@@ -62,13 +63,13 @@
       "type": "object",
       "title": "Example configuration",
       "properties": {
-        "languageServerExample.maxNumberOfProblems": {
+        "generoLanguageServer.maxNumberOfProblems": {
           "scope": "resource",
           "type": "number",
           "default": 100,
           "description": "Controls the maximum number of problems produced by the server."
         },
-        "languageServerExample.trace.server": {
+        "generoLanguageServer.trace.server": {
           "scope": "window",
           "type": "string",
           "enum": [
@@ -83,10 +84,18 @@
     }
   },
   "activationEvents": [
-    "onLanguage:genero 4gl",
-    "onLanguage:genero per"
+    "onLanguage:4gl"
   ],
-  "dependencies": {
-    "@types/node": "^12.7.4"
+  "devDdependencies": {
+    "@types/mocha": "^5.2.0",
+    "@types/node": "^12.7.4",
+    "tslint": "^5.16.0",
+    "typescript": "^3.5.1"
+  },
+  "scripts": {
+    "vscode:prepublish": "cd client && npm run update-vscode && cd .. && npm run compile",
+    "compile": "tsc -b",
+    "watch": "tsc -b -w",
+    "postinstall": "cd client && npm install && cd ../server && npm install && cd .."
   }
 }
