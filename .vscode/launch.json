@@ -21,7 +21,7 @@
 			"type": "node",
 			"request": "attach",
 			"name": "Attach to Server",
-			"port": 3000,
+			"port": 6009,
 			"protocol": "inspector",
 			"restart": true,
 			"outFiles": ["${workspaceRoot}/server/out/**/*.js"]

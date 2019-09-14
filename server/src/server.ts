@@ -89,7 +89,7 @@ connection.onDidChangeConfiguration(change => {
 		documentSettings.clear();
 	} else {
 		globalSettings = <ExampleSettings>(
-			(change.settings.generoLanguageServer || defaultSettings)
+			(change.settings.languageServerExample || defaultSettings)
 		);
 	}
 
@@ -105,7 +105,7 @@ function getDocumentSettings(resource: string): Thenable<ExampleSettings> {
 	if (!result) {
 		result = connection.workspace.getConfiguration({
 			scopeUri: resource,
-			section: 'generoLanguageServer'
+			section: 'languageServerExample'
 		});
 		documentSettings.set(resource, result);
 	}
