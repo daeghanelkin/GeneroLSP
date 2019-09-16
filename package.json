@@ -18,7 +18,7 @@
   "contributes": {
     "languages": [
       {
-        "id": "genero",
+        "id": "genero 4gl",
         "aliases": [
           "Genero 4GL",
           "genero 4gl",
@@ -47,7 +47,7 @@
     ],
     "grammars": [
       {
-        "language": "genero",
+        "language": "genero 4gl",
         "scopeName": "source.4gl",
         "path": "./syntaxes/Genero4GL.tmLanguage.json"
       },
@@ -68,7 +68,7 @@
       "type": "object",
       "title": "Example configuration",
       "properties": {
-        "languageServerExample.maxNumberOfProblems": {
+        "generoLanguageServer.maxNumberOfProblems": {
           "scope": "resource",
           "type": "number",
           "default": 100,
@@ -89,7 +89,7 @@
     }
   },
   "activationEvents": [
-    "onLanguage:genero"
+    "onLanguage:genero 4gl"
   ],
   "devDdependencies": {
     "@types/mocha": "^5.2.0",

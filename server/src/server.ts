@@ -89,7 +89,7 @@ connection.onDidChangeConfiguration(change => {
 		documentSettings.clear();
 	} else {
 		globalSettings = <ExampleSettings>(
-			(change.settings.languageServerExample || defaultSettings)
+			(change.settings.generoLanguageServer || defaultSettings)
 		);
 	}
 
@@ -105,7 +105,7 @@ function getDocumentSettings(resource: string): Thenable<ExampleSettings> {
 	if (!result) {
 		result = connection.workspace.getConfiguration({
 			scopeUri: resource,
-			section: 'languageServerExample'
+			section: 'generoLanguageServer'
 		});
 		documentSettings.set(resource, result);
 	}
@@ -211,7 +211,6 @@ connection.onCompletionResolve(
 	}
 );
 
-/*
 connection.onDidOpenTextDocument((params) => {
 	// A text document got opened in VSCode.
 	// params.uri uniquely identifies the document. For documents store on disk this is a file URI.
@@ -229,7 +228,6 @@ connection.onDidCloseTextDocument((params) => {
 	// params.uri uniquely identifies the document.
 	connection.console.log(`${params.textDocument.uri} closed.`);
 });
-*/
 
 // Make the text document manager listen on the connection
 // for open, change and close text document events
