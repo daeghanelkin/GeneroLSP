@@ -291,6 +291,44 @@
         }
       ]
     },
+    "FunctionParameters": {
+      "name": "meta.function.definition.parameters",
+      "begin": "\\(",
+      "beginCaptures": {
+        "0": {
+          "name": "punctuation.section.parameters.begin"
+        }
+      },
+      "patterns": [
+        {
+          "match": "(?i)\\s*([a-z0-9_]+)(\\s+(([a-z]+)|((like)\\s+([a-z0-9_.]+))))?\\s*",
+          "captures": {
+            "1": {
+              "name": "variable.parameter.4gl"
+            },
+            "4": {
+              "name": "storage.type.4gl"
+            },
+            "6": {
+              "name": "keyword.operator.defintion.4gl"
+            },
+            "7": {
+              "name": "storage.type.4gl"
+            }
+          }
+        },
+        {
+          "match": ",",
+          "name": "punctuation.separator.parameters.comma.4gl"
+        }
+      ],
+      "end": "\\)",
+      "endCaptures": {
+        "0": {
+          "name": "punctuation.section.parameters.end"
+        }
+      }
+    },
     "Functions": {
       "name": "meta.function.4gl",
       "begin": "(?i)^\\s*((public|private)\\s+)?(function)\\s+([a-z0-9_]+)\\s*(\\(.*?\\))(\\s*(returns)\\s*([a-z]+|\\(.*?\\)))?",
@@ -307,7 +345,7 @@
         "5": {
           "patterns": [
             {
-              "include": "#Parameters"
+              "include": "#FunctionParameters"
             }
           ]
         },
@@ -317,7 +355,7 @@
         "8": {
           "patterns": [
             {
-              "include": "#Parameters"
+              "include": "#ReturnParameters"
             }
           ]
         }
