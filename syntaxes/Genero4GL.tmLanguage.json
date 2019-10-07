@@ -37,6 +37,9 @@
     },
     {
       "include": "#Functions"
+    },
+    {
+      "include": "#Preprocessors"
     }
   ],
   "repository": {
@@ -48,7 +51,7 @@
           "match": "(?i)\\b(if|while|for|return)\\b"
         },
         {
-          "comment": "Assignment Keyword",
+          "comment": "Assignment",
           "name": "keyword.control.assignment.4gl",
           "match": "(?i)\\b(let)\\b"
         }
@@ -301,19 +304,20 @@
       },
       "patterns": [
         {
-          "match": "(?i)\\s*([a-z0-9_]+)(\\s+(([a-z]+)|((like)\\s+([a-z0-9_.]+))))?\\s*",
+          "match": "(?i)([a-z0-9_]+)((\\s+(like))?\\s+([a-z0-9_.]+))?",
           "captures": {
             "1": {
               "name": "variable.parameter.4gl"
             },
             "4": {
-              "name": "storage.type.4gl"
-            },
-            "6": {
               "name": "keyword.operator.defintion.4gl"
             },
-            "7": {
-              "name": "storage.type.4gl"
+            "5": {
+              "patterns": [
+                {
+                  "include": "#Datatypes"
+                }
+              ]
             }
           }
         },
@@ -374,6 +378,10 @@
           "name": "storage.type.function.4gl"
         }
       }
+    },
+    "Preprocessors": {
+      "name": "keyword.other.preprocessor.4gl",
+      "match": "\\b(__(ABS|BACKWARDKEY|BADSQLMSG|BETWEEN|CLEAREXCEPTION|COMBINE_DATE_TIME|DBGLVL|DEBUG|EXCEPTIONMESSAGE|FILE__|FORWARDKEY|HASEXCEPTION|IN|IS_USSTATE|IS_USZIP|LEFT|LINE__|MAX|MAXDATE|MAX_DED|MAXEMPLOYEE|MAX_FICA_DED|MAX_FIT_DED|MAX_LIT_DED|MAX_MEDC_DED|MAX_SIT_DED|MIN|MINDATE|MIN_DED|MIN_FICA_DED|MIN_FIT_DED|MIN_LIT_DED|MIN_MEDC_DED|MIN_SIT_DED|NOEXCEPTION|REPEAT|RETRO_TODO|RIGHT|THROW|VALUE_OR_DEFAULT|XOR|YN2BIT|ZERO))\\b"
     }
   },
   "scopeName": "source.4gl"

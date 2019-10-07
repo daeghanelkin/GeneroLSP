@@ -69,6 +69,36 @@
       "settings": {
         "foreground": "#DCDCAA"
       }
+    },
+    {
+      "scope": "variable.parameter.4gl",
+      "settings": {
+        "foreground": "#9CDCFE"
+      }
+    },
+    {
+      "scope": "keyword.control.4gl",
+      "settings": {
+        "foreground": "#569CD6"
+      }
+    },
+    {
+      "scope": "keyword.operator.boolean.4gl",
+      "settings": {
+        "foreground": "#E9236F"
+      }
+    },
+    {
+      "scope": "variable.language.4gl",
+      "settings": {
+        "foreground": "#d6c800"
+      }
+    },
+    {
+      "scope": "keyword.other.preprocessor.4gl",
+      "settings": {
+        "foreground": "#d6c800"
+      }
     }
   ]
 }
