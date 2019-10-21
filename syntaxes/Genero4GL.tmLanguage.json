@@ -6,9 +6,6 @@
   "name": "Genero 4GL",
   "patterns": [
     {
-      "include": "#Keywords"
-    },
-    {
       "include": "#Strings"
     },
     {
@@ -40,23 +37,21 @@
     },
     {
       "include": "#Preprocessors"
+    },
+    {
+      "include": "#Records"
+    },
+    {
+      "include": "#Var-Definitions"
+    },
+    {
+      "include": "#if-statements"
+    },
+    {
+      "include": "#case-statements"
     }
   ],
   "repository": {
-    "Keywords": {
-      "patterns": [
-        {
-          "comment": "General Keywords",
-          "name": "keyword.control.4gl",
-          "match": "(?i)\\b(if|while|for|return)\\b"
-        },
-        {
-          "comment": "Assignment",
-          "name": "keyword.control.assignment.4gl",
-          "match": "(?i)\\b(let)\\b"
-        }
-      ]
-    },
     "Strings": {
       "name": "string.quoted.double.4gl",
       "begin": "\"",
@@ -382,6 +377,77 @@
     "Preprocessors": {
       "name": "keyword.other.preprocessor.4gl",
       "match": "\\b(__(ABS|BACKWARDKEY|BADSQLMSG|BETWEEN|CLEAREXCEPTION|COMBINE_DATE_TIME|DBGLVL|DEBUG|EXCEPTIONMESSAGE|FILE__|FORWARDKEY|HASEXCEPTION|IN|IS_USSTATE|IS_USZIP|LEFT|LINE__|MAX|MAXDATE|MAX_DED|MAXEMPLOYEE|MAX_FICA_DED|MAX_FIT_DED|MAX_LIT_DED|MAX_MEDC_DED|MAX_SIT_DED|MIN|MINDATE|MIN_DED|MIN_FICA_DED|MIN_FIT_DED|MIN_LIT_DED|MIN_MEDC_DED|MIN_SIT_DED|NOEXCEPTION|REPEAT|RETRO_TODO|RIGHT|THROW|VALUE_OR_DEFAULT|XOR|YN2BIT|ZERO))\\b"
+    },
+    "Records": {
+      "name": "meta.var.definition.record.4gl",
+      "begin": "(?i)\\b(record)\\b",
+      "beginCaptures": {
+        "1": {
+          "name": "storage.type.4gl"
+        }
+      },
+      "patterns": [
+        {
+          "include": "#Datatypes"
+        },
+        {
+          "include": "#Numbers"
+        }
+      ],
+      "end": "(?i)\\b(end)\\s(record)\\b",
+      "endCaptures": {
+        "1": {
+          "name": "keyword.control.4gl"
+        },
+        "2": {
+          "name": "storage.type.4gl"
+        }
+      }
+    },
+    "Var-Definitions": {
+      "name": "meta.var.definition.4gl",
+      "begin": "(?i)(?=\\b(define)\\b)",
+      "end": "(?i)(?!\\b(define)\\b)"
+    },
+    "if-statements": {
+      "name": "meta.conditional.if.4gl",
+      "begin": "(?i)\\b(if)\\b",
+      "beginCaptures": {
+        "1":{
+          "name": "keyword.conditional.if.4gl"
+        }
+      },
+      "patterns": [
+        {
+          "include": "$base"
+        }
+      ],
+      "end": "(?i)\\b(end if)\\b",
+      "endCaptures": {
+        "1": {
+          "name": "keyword.conditional.if.4gl"
+        }
+      }
+    },
+    "case-statements": {
+      "name": "meta.conditional.case.4gl",
+      "begin": "(?i)\\b(case)\\b",
+      "beginCaptures": {
+        "1":{
+          "name":"keyword.conditional.case.4gl"
+        }
+      },
+      "patterns": [
+        {
+          "include": "$base"
+        }
+      ],
+      "end":"(?i)\\b(end case)\\b",
+      "endCaptures": {
+        "1":{
+          "name":"keyword.conditional.case.4gl"
+        }
+      }
     }
   },
   "scopeName": "source.4gl"
