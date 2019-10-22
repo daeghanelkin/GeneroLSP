@@ -1,7 +1,7 @@
 {
     "comments": {
         // symbol used for single line comment. Remove this entry if your language does not support line comments
-        "lineComment": "//",
+        "lineComment": "#",
         // symbols used for start and end a block comment. Remove this entry if your language does not support block comments
         "blockComment": [ "/*", "*/" ]
     },
@@ -28,7 +28,7 @@
         ["'", "'"]
     ],
     "indentationRules": {
-        "increaseIndentPattern": "\\b(function|report|main|then|case|for|while)\\b",
-        "decreaseIndentPattern": "\\b(end\\s+(function|report|main|if|case|for|while))\\b"
+        "increaseIndentPattern": "\\b(function|report|main|then|case|for|while|if)\\b",
+        "decreaseIndentPattern": "\\b(end\\s+(function|report|main|if|case|for|while))\\b",
     }
 }

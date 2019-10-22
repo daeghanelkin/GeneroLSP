@@ -406,20 +406,62 @@
     },
     "Var-Definitions": {
       "name": "meta.var.definition.4gl",
-      "begin": "(?i)(?=\\b(define)\\b)",
-      "end": "(?i)(?!\\b(define)\\b)"
-    },
-    "if-statements": {
-      "name": "meta.conditional.if.4gl",
-      "begin": "(?i)\\b(if)\\b",
+      "begin": "(?i)\\b(define)\\b",
       "beginCaptures": {
-        "1":{
-          "name": "keyword.conditional.if.4gl"
+        "1": {
+          "name": "keyword.control.defintion.4gl"
         }
       },
       "patterns": [
         {
-          "include": "$base"
+          "include": "#Datatypes"
+        },
+        {
+          "include": "#Records"
+        }
+      ],
+      "end": "$(?<!\\W)"
+    },
+    "if-statements": {
+      "name": "meta.conditional.if.4gl",
+      "begin": "(?i)(?i)(?=(?<!end\\s)\\bif\\b)",
+      "patterns": [
+        {
+          "begin": "(?i)\\b(if)\\b",
+          "beginCaptures": {
+            "1": {
+              "name": "keyword.conditional.if.4gl"
+            }
+          },
+          "patterns" : [
+            {
+              "comment": "Matches statements with structure IF (condition) THEN",
+              "contentName": "meta.conditional.if.conditions.4gl",
+              "begin": "\\(",
+              "beginCaptures": {
+                "0": {
+                  "name": "punctuation.section.parameters.begin"
+                }
+              },
+              "patterns":[
+                {
+                  "include": "$base"
+                }
+              ],
+              "end": "\\)",
+              "endCaptures": {
+                "0": {
+                  "name": "punctuation.section.parameters.end"
+                }
+              }
+            }
+          ],
+          "end": "(?i)\\b(then)\\b",
+          "endCaptures": {
+            "1": {
+              "name": "keyword.conditional.then.4gl"
+            }
+          }
         }
       ],
       "end": "(?i)\\b(end if)\\b",

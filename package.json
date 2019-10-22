@@ -63,6 +63,12 @@
         "uiTheme": "vs-dark",
         "path": "./themes/Genero.tmTheme.json"
       }
+    ],
+    "snippets": [
+      {
+        "language": "genero 4gl",
+        "path": "./snippets/snippets.json"
+      }
     ]
   },
   "activationEvents": [
