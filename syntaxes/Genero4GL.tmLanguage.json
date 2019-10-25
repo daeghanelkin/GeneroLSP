@@ -211,9 +211,148 @@
     "Datatypes": {
       "patterns": [
         {
-          "comment": "Data Types",
+          "comment": "Simple Data Types",
           "name": "storage.type.4gl",
-          "match": "(?i)\\b(bigint|byte|boolean|char|date|datetime|decimal|float|int|integer|interval|money|smallfloat|smallint|string|tinyint|text|varchar)\\b"
+          "match": "(?i)\\b(bigint|byte|boolean|date|float|int|integer|smallfloat|smallint|string|tinyint|text)\\b"
+        },
+        {
+          "comment": "Complex Data Types",
+          "patterns": [
+            {
+              "comment": "CHAR type",
+              "match": "(?i)(\\bchar(?:acter)?\\b)(\\s*(\\()([0-9]+)(\\)))?",
+              "captures": {
+                "1": {
+                  "name": "storage.type.4gl"
+                },
+                "3": {
+                  "name": "punctuation.section.scope.begin.4gl"
+                },
+                "4": {
+                  "name": "storage.type.char.length.4gl",
+                  "patterns": [
+                    {
+                      "include": "#Numbers"
+                    }
+                  ]
+                },
+                "5": {
+                  "name": "punctuation.section.scope.end.4gl"
+                }
+              }
+            },
+            {
+              "comment": "VARCHAR type",
+              "match": "(?i)(\\bvarchar\\b)(\\s*(\\()([0-9]+)(\\)))?",
+              "captures": {
+                "1": {
+                  "name": "storage.type.4gl"
+                },
+                "3": {
+                  "name": "punctuation.section.scope.begin.4gl"
+                },
+                "4": {
+                  "name": "storage.type.varchar.max-length.4gl",
+                  "patterns": [
+                    {
+                      "include": "#Numbers"
+                    }
+                  ]
+                },
+                "5": {
+                  "name": "punctuation.section.scope.end.4gl"
+                }
+              }
+            },
+            {
+              "comment": "DECIMAL type",
+              "match": "(?i)(\\b(dec|decimal|numeric)\\b)(\\s*(\\()([0-9]+)((,)\\s*([0-9]+))?(\\)))?",
+              "captures": {
+                "2": {
+                  "name": "storage.type.4gl"
+                },
+                "4": {
+                  "name": "punctuation.section.scope.begin.4gl"
+                },
+                "5": {
+                  "name": "storage.type.decimal.precision.4gl",
+                  "patterns": [
+                    {
+                      "include": "#Numbers"
+                    }
+                  ]
+                },
+                "7": {
+                  "name": "punctuation.separator.comma.4gl"
+                },
+                "8": {
+                  "name": "storage.type.decimal.scale.4gl",
+                  "patterns": [
+                    {
+                      "include": "#Numbers"
+                    }
+                  ]
+                },
+                "9": {
+                  "name": "punctuation.section.scope.end.4gl"
+                }
+              }
+            },
+            {
+              "comment": "DATETIME type",
+              "match": "(?i)\\b(datetime)\\s+(year|month|day|hour|minute|second|fraction)\\s+(to)\\s+(year|month|day|hour|minute|second|(fraction\\s*(\\()\\s*([1-5])\\s*(\\))))",
+              "captures": {
+                "1": {
+                  "name": "storage.type.4gl"
+                },
+                "2": {
+                  "name": "storage.type.datetime.time.4gl"
+                },
+                "3": {
+                  "name": "keyword.other.4gl"
+                },
+                "4": {
+                  "name": "storage.type.datetime.time.4gl"
+                },
+                "6": {
+                  "name": "punctuation.section.scope.begin.4gl"
+                },
+                "7": {
+                  "name": "storage.type.datetime.time.fraction.scale.4gl"
+                },
+                "8": {
+                  "name": "punctuation.section.scope.end.4gl"
+                }
+              }
+            },
+            {
+              "comment": "INTERVAL type",
+              "match": "(?i)\\b(interval)\\s+(year|month|day|hour|minute|second|(fraction\\s*(\\()\\s*([1-5])\\s*(\\))))\\s+(to)\\s+(year|month|day|hour|minute|second|(fraction\\s*(\\()\\s*([1-5])\\s*(\\))))",
+              "captures": {
+                "1": {
+                  "name": "storage.type.4gl"
+                },
+                "2": {
+                  "name": "storage.type.datetime.time.4gl"
+                },
+                "3": {
+                  "name": "keyword.other.4gl"
+                },
+                "4": {
+                  "name": "storage.type.datetime.time.4gl"
+                },
+                "6": {
+                  "name": "punctuation.section.scope.begin.4gl"
+                },
+                "7": {
+                  "name": "storage.type.datetime.time.fraction.scale.4gl"
+                },
+                "8": {
+                  "name": "punctuation.section.scope.end.4gl"
+                }
+              }
+            }
+          ]
         }
       ]
     },
@@ -406,7 +545,7 @@
     },
     "Var-Definitions": {
       "name": "meta.var.definition.4gl",
-      "begin": "(?i)\\b(define)\\b",
+      "begin": "(?i)(?=(?<![_$[:alnum:]])\\b(define)(?![_$[:alnum:]]))",
       "beginCaptures": {
         "1": {
           "name": "keyword.control.defintion.4gl"

@@ -7,6 +7,10 @@ import {
     CancellationToken
 } from 'vscode';
 
+// Tests for syntax highlighting
+let something = 10,
+    another = "help";
+
 export default class GoDefinitionProvider implements DefinitionProvider {
     public provideDefinition(
         document: TextDocument,
