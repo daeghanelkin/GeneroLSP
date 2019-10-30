@@ -169,7 +169,7 @@
         {
           "comment": "Date and Time Operators",
           "name": "keyword.operator.datetime.4gl",
-          "match": "(?i)\\b(current|extend|date|time|today|year|month|day|weekday|mdy|units)\\b"
+          "match": "(?i)\\b(current|extend|date|time|today|year|month|day|weekday|mdy|units)\\("
         },
         {
           "comment": "SQL Related Operators",
@@ -219,8 +219,8 @@
           "comment": "Complex Data Types",
           "patterns": [
             {
-              "comment": "CHAR type",
-              "match": "(?i)(\\bchar(?:acter)?\\b)(\\s*(\\()([0-9]+)(\\)))?",
+              "comment": "CHAR & VARCHAR type",
+              "match": "(?i)\\b(varchar|char(?:acter)?)\\b(\\s*(\\()([0-9]+)(\\)))?",
               "captures": {
                 "1": {
                   "name": "storage.type.4gl"
@@ -229,7 +229,7 @@
                   "name": "punctuation.section.scope.begin.4gl"
                 },
                 "4": {
-                  "name": "storage.type.char.length.4gl",
+                  "name": "storage.type.length.4gl",
                   "patterns": [
                     {
                       "include": "#Numbers"
@@ -242,31 +242,8 @@
               }
             },
             {
-              "comment": "VARCHAR type",
-              "match": "(?i)(\\bvarchar\\b)(\\s*(\\()([0-9]+)(\\)))?",
-              "captures": {
-                "1": {
-                  "name": "storage.type.4gl"
-                },
-                "3": {
-                  "name": "punctuation.section.scope.begin.4gl"
-                },
-                "4": {
-                  "name": "storage.type.varchar.max-length.4gl",
-                  "patterns": [
-                    {
-                      "include": "#Numbers"
-                    }
-                  ]
-                },
-                "5": {
-                  "name": "punctuation.section.scope.end.4gl"
-                }
-              }
-            },
-            {
-              "comment": "DECIMAL type",
-              "match": "(?i)(\\b(dec|decimal|numeric)\\b)(\\s*(\\()([0-9]+)((,)\\s*([0-9]+))?(\\)))?",
+              "comment": "DECIMAL & MONEY type",
+              "match": "(?i)(\\b(dec|decimal|numeric|money)\\b)(\\s*(\\()(\\d+)((,)\\s*(\\d+))?(\\)))?",
               "captures": {
                 "2": {
                   "name": "storage.type.4gl"
@@ -275,7 +252,7 @@
                   "name": "punctuation.section.scope.begin.4gl"
                 },
                 "5": {
-                  "name": "storage.type.decimal.precision.4gl",
+                  "name": "storage.type.precision.4gl",
                   "patterns": [
                     {
                       "include": "#Numbers"
@@ -286,7 +263,7 @@
                   "name": "punctuation.separator.comma.4gl"
                 },
                 "8": {
-                  "name": "storage.type.decimal.scale.4gl",
+                  "name": "storage.type.scale.4gl",
                   "patterns": [
                     {
                       "include": "#Numbers"
@@ -318,7 +295,12 @@
                   "name": "punctuation.section.scope.begin.4gl"
                 },
                 "7": {
-                  "name": "storage.type.datetime.time.fraction.scale.4gl"
+                  "name": "storage.type.datetime.time.fraction.scale.4gl",
+                  "patterns": [
+                    {
+                      "include": "#Numbers"
+                    }
+                  ]
                 },
                 "8": {
                   "name": "punctuation.section.scope.end.4gl"
@@ -327,7 +309,7 @@
             },
             {
               "comment": "INTERVAL type",
-              "match": "(?i)\\b(interval)\\s+(year|month|day|hour|minute|second|(fraction\\s*(\\()\\s*([1-5])\\s*(\\))))\\s+(to)\\s+(year|month|day|hour|minute|second|(fraction\\s*(\\()\\s*([1-5])\\s*(\\))))",
+              "match": "(?i)\\b(interval)\\s+(((year|month|day|hour|minute|second)\\s*(\\()([1-9])(\\)))|fraction)\\s+(to)\\s+(year|month|day|hour|minute|second|(fraction\\s*(\\()\\s*([1-5])\\s*(\\))))",
               "captures": {
                 "1": {
                   "name": "storage.type.4gl"
@@ -335,19 +317,38 @@
                 "2": {
                   "name": "storage.type.datetime.time.4gl"
                 },
-                "3": {
-                  "name": "keyword.other.4gl"
-                },
-                "4": {
-                  "name": "storage.type.datetime.time.4gl"
-                },
-                "6": {
+                "5": {
                   "name": "punctuation.section.scope.begin.4gl"
                 },
+                "6": {
+                  "name": "storage.type.datetime.time.precision.4gl",
+                  "patterns": [
+                    {
+                      "include": "#Numbers"
+                    }
+                  ]
+                },
                 "7": {
-                  "name": "storage.type.datetime.time.fraction.scale.4gl"
+                  "name": "punctuation.section.scope.end.4gl"
                 },
                 "8": {
+                  "name": "keyword.other.4gl"
+                },
+                "9": {
+                  "name": "storage.type.datetime.time.4gl"
+                },
+                "11": {
+                  "name": "punctuation.section.scope.begin.4gl"
+                },
+                "12": {
+                  "name": "storage.type.datetime.time.fraction.scale.4gl",
+                  "patterns": [
+                    {
+                      "include": "#Numbers"
+                    }
+                  ]
+                },
+                "13": {
                   "name": "punctuation.section.scope.end.4gl"
                 }
               }
