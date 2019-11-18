@@ -11,11 +11,11 @@
 			"name": "Launch Extension",
 			"runtimeExecutable": "${execPath}",
 			"args": ["--extensionDevelopmentPath=${workspaceRoot}"],
-			"outFiles": ["${workspaceRoot}/extension/out/**/*.js"]/*,
+			"outFiles": ["${workspaceRoot}/extension/out/**/*.js"],
 			"preLaunchTask": {
 				"type": "npm",
 				"script": "watch"
-			}*/
+			}
 		}
     ]
 }

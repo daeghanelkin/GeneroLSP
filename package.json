@@ -82,13 +82,15 @@
     "typescript": "^3.5.1"
   },
   "scripts": {
-    "vscode:prepublish": "cd client && npm run update-vscode && cd .. && npm run compile",
+    "vscode:prepublish": "cd extension && npm run update-vscode && cd .. && npm run compile",
     "compile": "tsc -b",
     "watch": "tsc -b -w",
-    "postinstall": "cd client && npm install && cd ../server && npm install && cd .."
+    "postinstall": "cd extension && npm install && cd .."
   },
   "dependencies": {
-    "vscode": "^1.1.36"
+    "request": "^2.88.0",
+    "vscode": "^1.1.36",
+    "vscode-uri": "^2.1.1"
   },
   "devDependencies": {
     "@types/node": "^12.7.5",

@@ -1,33 +1,20 @@
 import {
     DefinitionProvider,
     Location,
-    ProviderResult,
     TextDocument,
-    Position, 
-    CancellationToken
+    Position
 } from 'vscode';
 
-// Tests for syntax highlighting
-let something = 10,
-    another = "help";
+import {
+    URI
+} from 'vscode-uri';
 
 export default class GoDefinitionProvider implements DefinitionProvider {
     public provideDefinition(
-        document: TextDocument,
-        position: Position,
-        token: CancellationToken): Thenable<Location> {
-        return this.getDefinition(document, position, token);
-    }
-
-    public getDefinition(document: TextDocument, position: Position, token: CancellationToken): Promise<Location> {
-
-        if (token) {
-            if (token.isCancellationRequested) {
-            }
-        }
-
-        let wordRange = document.getWordRangeAtPosition(position);
-        
-        return
+        document: TextDocument): Location {
+        return new Location(
+            URI.file(document.fileName),
+            new Position(15, 2)
+        );
     }
 }
