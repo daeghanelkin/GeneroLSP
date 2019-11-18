@@ -39,12 +39,6 @@
       "include": "#Preprocessors"
     },
     {
-      "include": "#Records"
-    },
-    {
-      "include": "#Var-Definitions"
-    },
-    {
       "include": "#if-statements"
     },
     {
@@ -352,8 +346,48 @@
                   "name": "punctuation.section.scope.end.4gl"
                 }
               }
+            },
+            {
+              "comment": "RECORD type",
+              "match": "(?i)\\b(record)\\s+(like)\\s+(([[:alnum:]_]+(\\.))?[[:alnum:]_]+(\\.)\\*)",
+              "captures": {
+                "1": {
+                  "name": "storage.type.record.4gl"
+                },
+                "2": {
+                  "name": "keyword.other.4gl"
+                }, 
+                "3": {
+                  "name": "constant.other.4gl"
+                }
+              }
+            },
+            {
+              "comment": "DICTIONARY type",
+              "match": "(?i)\\b(dictionary)\\s+(of)\\s+(.*)",
+              "captures": {
+                "1": {
+                  "name":"storage.type.dictionary.4gl"
+                },
+                "2": {
+                  "name": "keyword.other.4gl"
+                },
+                "3": {
+                  "patterns": [
+                    {
+                      "include": "#Datatypes"
+                    }
+                  ]
+                }
+              }
             }
           ]
+        },
+        {
+          "include": "#Arrays"
+        },
+        {
+          "include": "#Records"
         }
       ]
     },
@@ -520,18 +554,15 @@
     },
     "Records": {
       "name": "meta.var.definition.record.4gl",
-      "begin": "(?i)\\b(record)\\b",
+      "begin": "\\b(record)\\b(?!\\s+like\\b)",
       "beginCaptures": {
         "1": {
-          "name": "storage.type.4gl"
+          "name": "storage.type.record.4gl"
         }
       },
       "patterns": [
         {
           "include": "#Datatypes"
-        },
-        {
-          "include": "#Numbers"
         }
       ],
       "end": "(?i)\\b(end)\\s(record)\\b",
@@ -540,74 +571,100 @@
           "name": "keyword.control.4gl"
         },
         "2": {
-          "name": "storage.type.4gl"
+          "name": "storage.type.record.4gl"
         }
       }
     },
-    "Var-Definitions": {
-      "name": "meta.var.definition.4gl",
-      "begin": "(?i)(?=(?<![_$[:alnum:]])\\b(define)(?![_$[:alnum:]]))",
+    "Arrays": {
+      "patterns": [
+        {
+          "comment": "Dynamic Array",
+          "match": "(\\bdynamic\\b)\\s+(\\barray\\b)\\s+(of\\b)\\s+(.*)",
+          "captures":{
+            "1":{
+              "name": "storage.modifier.4gl"
+            },
+            "2":{
+              "name": "storage.type.array.4gl"
+            },
+            "3":{
+              "name": "keyword.other.4gl"
+            },
+            "4":{
+              "patterns":[
+                {
+                  "include": "#Datatypes"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "comment": "Static Array",
+          "match": "(?i)(\\barray)\\s*(\\[)([0-9 ,]+)(\\])\\s*(of)\\s+(.*)",
+          "captures": {
+            "1": {
+              "name": "storage.type.array.4gl"
+            },
+            "2": {
+              "name": "punctuation.section.scope.begin.4gl"
+            },
+            "3":{
+              "patterns":[
+                {
+                  "include": "#Numbers"
+                },
+                {
+                  "match": ",",
+                  "name": "punctuation.separator.comma.4gl"
+                }
+              ]
+            },
+            "4": {
+              "name": "punctuation.section.scope.end.4gl"
+            },
+            "5": {
+              "name": "keyword.other.4gl"
+            },
+            "6": {
+              "patterns":[
+                {
+                  "include": "#Datatypes"
+                }
+              ]
+            }
+          }
+        }
+      ]
+    },
+    "if-statements": {
+      "name": "meta.conditional.if.4gl",
+      "begin": "(?i)^\\s*(if)\\s+(.*)\\s+(then)",
       "beginCaptures": {
         "1": {
-          "name": "keyword.control.defintion.4gl"
+          "name":"keyword.control.conditional.4gl"
+        },
+        "2":{
+          "name": "meta.conditional.if.conditions.4gl",
+          "patterns": [
+            {
+              "include": "$base"
+            }
+          ]
+        },
+        "3": {
+          "name": "keyword.control.conditional.4gl"
         }
       },
       "patterns": [
         {
-          "include": "#Datatypes"
-        },
-        {
-          "include": "#Records"
-        }
-      ],
-      "end": "$(?<!\\W)"
-    },
-    "if-statements": {
-      "name": "meta.conditional.if.4gl",
-      "begin": "(?i)(?i)(?=(?<!end\\s)\\bif\\b)",
-      "patterns": [
-        {
-          "begin": "(?i)\\b(if)\\b",
-          "beginCaptures": {
-            "1": {
-              "name": "keyword.conditional.if.4gl"
-            }
-          },
-          "patterns" : [
-            {
-              "comment": "Matches statements with structure IF (condition) THEN",
-              "contentName": "meta.conditional.if.conditions.4gl",
-              "begin": "\\(",
-              "beginCaptures": {
-                "0": {
-                  "name": "punctuation.section.parameters.begin"
-                }
-              },
-              "patterns":[
-                {
-                  "include": "$base"
-                }
-              ],
-              "end": "\\)",
-              "endCaptures": {
-                "0": {
-                  "name": "punctuation.section.parameters.end"
-                }
-              }
-            }
-          ],
-          "end": "(?i)\\b(then)\\b",
-          "endCaptures": {
-            "1": {
-              "name": "keyword.conditional.then.4gl"
-            }
-          }
+          "include": "$base"
         }
       ],
       "end": "(?i)\\b(end if)\\b",
       "endCaptures": {
         "1": {
-          "name": "keyword.conditional.if.4gl"
+          "name": "keyword.control.conditional.4gl"
         }
       }
     },
@@ -616,7 +673,7 @@
       "begin": "(?i)\\b(case)\\b",
       "beginCaptures": {
         "1":{
-          "name":"keyword.conditional.case.4gl"
+          "name":"keyword.control.conditional.4gl"
         }
       },
       "patterns": [
@@ -627,7 +684,7 @@
       "end":"(?i)\\b(end case)\\b",
       "endCaptures": {
         "1":{
-          "name":"keyword.conditional.case.4gl"
+          "name":"keyword.control.conditional.4gl"
         }
       }
     }

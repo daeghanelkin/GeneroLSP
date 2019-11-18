@@ -2,102 +2,92 @@
   "name": "Genero Dark",
   "settings": [
     {
-      "scope": "storage.type.4gl",
+      "scope": [
+        "keyword.control.assignment.4gl",
+        "storage.type.function.4gl",
+        "storage.type"
+      ],
       "settings": {
         "fontStyle": "italic",
-        "foreground": "#569CD6"
+        "foreground": "#569cd6"
       }
     },
     {
       "scope": "string",
       "settings": {
-        "foreground": "#CE9178"
+        "foreground": "#ce9178"
       }
     },
     {
       "scope": "comment",
       "settings": {
-        "foreground": "#6A9955"
+        "foreground": "#6a9955"
       }
     },
     {
-      "scope": "keyword.control.directive.include.4gl",
-      "settings": {
-        "foreground": "#C586C0"
-      }
-    },
-    {
-      "scope": "keyword.control.directive.import.4gl",
-      "settings": {
-        "foreground": "#C586C0"
+      "scope": [
+          "keyword.control.directive.include.4gl",
+          "keyword.control.directive.import.4gl"
+        ],
+        "settings": {
+        "foreground": "#c586c0"
       }
     },
     {
       "scope": "keyword.control.directive.import.fgl.4gl",
       "settings": {
-        "foreground": "#88419A"
+        "foreground": "#88419a"
       }
     },
     {
       "scope": "constant.numeric",
       "settings": {
-        "foreground": "#B5CEA8"
-      }
-    },
-    {
-      "scope": "keyword.control.assignment.4gl",
-      "settings": {
-        "fontStyle": "italic",
-        "foreground": "#569CD6"
+        "foreground": "#b5cea8"
       }
     },
     {
       "scope": "constant",
       "settings": {
-        "foreground": "#4EC9B0"
-      }
-    },
-    {
-      "scope": "storage.type.function.4gl",
-      "settings": {
-        "fontStyle": "italic",
-        "foreground": "#569CD6"
+        "foreground": "#4ec9b0"
       }
     },
     {
       "scope": "entity.name.function.4gl",
       "settings": {
-        "foreground": "#DCDCAA"
+        "foreground": "#dcdcaa"
       }
     },
     {
       "scope": "variable.parameter.4gl",
       "settings": {
-        "foreground": "#9CDCFE"
+        "foreground": "#9cdcfe"
       }
     },
     {
-      "scope": "keyword.control.4gl",
+      "scope": "keyword.control",
       "settings": {
-        "foreground": "#569CD6"
+        "foreground": "#569cd6"
       }
     },
     {
       "scope": "keyword.operator.boolean.4gl",
       "settings": {
-        "foreground": "#E9236F"
+        "foreground": "#e9236f"
       }
     },
     {
-      "scope": "variable.language.4gl",
+      "scope": [
+        "variable.language.4gl",
+        "keyword.other.preprocessor.4gl"
+      ],
       "settings": {
         "foreground": "#d6c800"
       }
     },
     {
-      "scope": "keyword.other.preprocessor.4gl",
+      "scope": "storage.type.modifier",
       "settings": {
-        "foreground": "#d6c800"
+        "foreground": "#f06431"
       }
     }
   ]

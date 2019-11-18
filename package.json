@@ -29,7 +29,7 @@
           ".4gl",
           ".4GL"
         ],
-        "configuration": "./syntaxes/language-configuration.json"
+        "configuration": "./syntaxes/Genero4GL.language-configuration.json"
       },
       {
         "id": "genero per",
@@ -42,7 +42,8 @@
         "extensions": [
           ".per",
           ".PER"
-        ]
+        ],
+        "configuration": "./syntaxes/GeneroPER.language-configuration.json"
       }
     ],
     "grammars": [
