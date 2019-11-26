@@ -1,11 +1,8 @@
 import { languages} from "vscode";
-import GoDefinitionProvider from "./Providers/definitionProvider";
-import GoHoverProvider from "./Providers/hoverProvider";
-
-/* --------------------------------------------------------------------------------------------
- * Copyright (c) Microsoft Corporation. All rights reserved.
- * Licensed under the MIT License. See License.txt in the project root for license information.
- * ------------------------------------------------------------------------------------------ */
+//import GoDefinitionProvider from "./Providers/definitionProvider";
+//import GoHoverProvider from "./Providers/hoverProvider";
+import GoDocumentSymbolProvider from "./Providers/documentSymbolProvider";
+//import GoWorkspaceSymbolProvider from "./Providers/workspaceSymbolProvider";
 
 export function activate() {
     console.log("Extension: Genero Extension Started");
@@ -13,6 +10,8 @@ export function activate() {
 }
 
 function registerLanguageFeatures() {
-    languages.registerDefinitionProvider("genero 4gl", new GoDefinitionProvider());
-    languages.registerHoverProvider({scheme: 'file', language: 'genero 4gl'}, new GoHoverProvider());
+    //languages.registerDefinitionProvider({scheme: 'file', language: 'genero 4gl'}, new GoDefinitionProvider());
+    //languages.registerHoverProvider({scheme: 'file', language: 'genero 4gl'}, new GoHoverProvider());
+    languages.registerDocumentSymbolProvider({scheme: 'file', language: 'genero 4gl'}, new GoDocumentSymbolProvider());
+    //languages.registerDocumentSymbolProvider({scheme: 'file', language: 'genero 4gl'}, new GoWorkspaceSymbolProvider());
 }
