@@ -1,0 +1,1012 @@
+{
+  "keywords": [
+    {
+      "name": "ACCELERATOR",
+      "type": "keyword"
+    },
+    {
+      "name": "ACCELERATOR2",
+      "type": "keyword"
+    },
+    {
+      "name": "ACCELERATOR3",
+      "type": "keyword"
+    },
+    {
+      "name": "ACCELERATOR4",
+      "type": "keyword"
+    },
+    {
+      "name": "ACTION",
+      "type": "keyword"
+    },
+    {
+      "name": "ACTIONIMAGE",
+      "type": "keyword"
+    },
+    {
+      "name": "ACTIONTEXT",
+      "type": "keyword"
+    },
+    {
+      "name": "AGGREGATE",
+      "type": "keyword"
+    },
+    {
+      "name": "AGGREGATETEXT",
+      "type": "keyword"
+    },
+    {
+      "name": "AGGREGATETYPE",
+      "type": "keyword"
+    },
+    {
+      "name": "ALT",
+      "type": "keyword"
+    },
+    {
+      "name": "AND",
+      "type": "keyword"
+    },
+    {
+      "name": "ATTRIBUTES",
+      "type": "keyword"
+    },
+    {
+      "name": "AUTO",
+      "type": "keyword"
+    },
+    {
+      "name": "AUTONEXT",
+      "type": "keyword"
+    },
+    {
+      "name": "AUTOSCALE",
+      "type": "keyword"
+    },
+    {
+      "name": "AVG",
+      "type": "keyword"
+    },
+    {
+      "name": "BETWEEN",
+      "type": "keyword"
+    },
+    {
+      "name": "BIGINT",
+      "type": "keyword"
+    },
+    {
+      "name": "BLACK",
+      "type": "keyword"
+    },
+    {
+      "name": "BLINK",
+      "type": "keyword"
+    },
+    {
+      "name": "BLUE",
+      "type": "keyword"
+    },
+    {
+      "name": "BOOLEAN",
+      "type": "keyword"
+    },
+    {
+      "name": "BOTH",
+      "type": "keyword"
+    },
+    {
+      "name": "BUTTON",
+      "type": "keyword"
+    },
+    {
+      "name": "BUTTONEDIT",
+      "type": "keyword"
+    },
+    {
+      "name": "BUTTONTEXTHIDDEN",
+      "type": "keyword"
+    },
+    {
+      "name": "BY",
+      "type": "keyword"
+    },
+    {
+      "name": "BYTE",
+      "type": "keyword"
+    },
+    {
+      "name": "CANVAS",
+      "type": "keyword"
+    },
+    {
+      "name": "CENTER",
+      "type": "keyword"
+    },
+    {
+      "name": "CENTURY",
+      "type": "keyword"
+    },
+    {
+      "name": "CHAR",
+      "type": "keyword"
+    },
+    {
+      "name": "CHARACTER",
+      "type": "keyword"
+    },
+    {
+      "name": "CHARACTERS",
+      "type": "keyword"
+    },
+    {
+      "name": "CHECKBOX",
+      "type": "keyword"
+    },
+    {
+      "name": "CLASS",
+      "type": "keyword"
+    },
+    {
+      "name": "COLOR",
+      "type": "keyword"
+    },
+    {
+      "name": "COLUMNS",
+      "type": "keyword"
+    },
+    {
+      "name": "COMBOBOX",
+      "type": "keyword"
+    },
+    {
+      "name": "COMMAND",
+      "type": "keyword"
+    },
+    {
+      "name": "COMMENT",
+      "type": "keyword"
+    },
+    {
+      "name": "COMMENTS",
+      "type": "keyword"
+    },
+    {
+      "name": "COMPACT",
+      "type": "keyword"
+    },
+    {
+      "name": "COMPLETER",
+      "type": "keyword"
+    },
+    {
+      "name": "COMPONENTTYPE",
+      "type": "keyword"
+    },
+    {
+      "name": "COMPRESS",
+      "type": "keyword"
+    },
+    {
+      "name": "CONFIG",
+      "type": "keyword"
+    },
+    {
+      "name": "CONTEXTMENU",
+      "type": "keyword"
+    },
+    {
+      "name": "CONTROL",
+      "type": "keyword"
+    },
+    {
+      "name": "COUNT",
+      "type": "keyword"
+    },
+    {
+      "name": "CURRENT",
+      "type": "keyword"
+    },
+    {
+      "name": "CYAN",
+      "type": "keyword"
+    },
+    {
+      "name": "DATABASE",
+      "type": "keyword"
+    },
+    {
+      "name": "DATE",
+      "type": "keyword"
+    },
+    {
+      "name": "DATEEDIT",
+      "type": "keyword"
+    },
+    {
+      "name": "DATETIME",
+      "type": "keyword"
+    },
+    {
+      "name": "DATETIMEEDIT",
+      "type": "keyword"
+    },
+    {
+      "name": "DAY",
+      "type": "keyword"
+    },
+    {
+      "name": "DEC",
+      "type": "keyword"
+    },
+    {
+      "name": "DECIMAL",
+      "type": "keyword"
+    },
+    {
+      "name": "DEFAULT",
+      "type": "keyword"
+    },
+    {
+      "name": "DEFAULTS",
+      "type": "keyword"
+    },
+    {
+      "name": "DEFAULTVIEW",
+      "type": "keyword"
+    },
+    {
+      "name": "DELIMITERS",
+      "type": "keyword"
+    },
+    {
+      "name": "DISCLOSUREINDICATOR",
+      "type": "keyword"
+    },
+    {
+      "name": "DISPLAY",
+      "type": "keyword"
+    },
+    {
+      "name": "DISPLAYONLY",
+      "type": "keyword"
+    },
+    {
+      "name": "DOUBLE",
+      "type": "keyword"
+    },
+    {
+      "name": "DOUBLECLICK",
+      "type": "keyword"
+    },
+    {
+      "name": "DOWNSHIFT",
+      "type": "keyword"
+    },
+    {
+      "name": "DYNAMIC",
+      "type": "keyword"
+    },
+    {
+      "name": "EDIT",
+      "type": "keyword"
+    },
+    {
+      "name": "EMAIL",
+      "type": "keyword"
+    },
+    {
+      "name": "END",
+      "type": "keyword"
+    },
+    {
+      "name": "EXPANDEDCOLUMN",
+      "type": "keyword"
+    },
+    {
+      "name": "FALSE",
+      "type": "keyword"
+    },
+    {
+      "name": "FIELD",
+      "type": "keyword"
+    },
+    {
+      "name": "FIXED",
+      "type": "keyword"
+    },
+    {
+      "name": "FLOAT",
+      "type": "keyword"
+    },
+    {
+      "name": "FOLDER",
+      "type": "keyword"
+    },
+    {
+      "name": "FONTPITCH",
+      "type": "keyword"
+    },
+    {
+      "name": "FORM",
+      "type": "keyword"
+    },
+    {
+      "name": "FORMAT",
+      "type": "keyword"
+    },
+    {
+      "name": "FORMONLY",
+      "type": "keyword"
+    },
+    {
+      "name": "FRACTION",
+      "type": "keyword"
+    },
+    {
+      "name": "GREEN",
+      "type": "keyword"
+    },
+    {
+      "name": "GRID",
+      "type": "keyword"
+    },
+    {
+      "name": "GRIDCHILDRENINPARENT",
+      "type": "keyword"
+    },
+    {
+      "name": "GROUP",
+      "type": "keyword"
+    },
+    {
+      "name": "HBOX",
+      "type": "keyword"
+    },
+    {
+      "name": "HEIGHT",
+      "type": "keyword"
+    },
+    {
+      "name": "HIDDEN",
+      "type": "keyword"
+    },
+    {
+      "name": "HORIZONTAL",
+      "type": "keyword"
+    },
+    {
+      "name": "HOUR",
+      "type": "keyword"
+    },
+    {
+      "name": "IDCOLUMN",
+      "type": "keyword"
+    },
+    {
+      "name": "IMAGE",
+      "type": "keyword"
+    },
+    {
+      "name": "IMAGECOLLAPSED",
+      "type": "keyword"
+    },
+    {
+      "name": "IMAGECOLUMN",
+      "type": "keyword"
+    },
+    {
+      "name": "IMAGEEXPANDED",
+      "type": "keyword"
+    },
+    {
+      "name": "IMAGELEAF",
+      "type": "keyword"
+    },
+    {
+      "name": "INCLUDE",
+      "type": "keyword"
+    },
+    {
+      "name": "INITIAL",
+      "type": "keyword"
+    },
+    {
+      "name": "INITIALIZER",
+      "type": "keyword"
+    },
+    {
+      "name": "INITIALPAGESIZE",
+      "type": "keyword"
+    },
+    {
+      "name": "INPUT",
+      "type": "keyword"
+    },
+    {
+      "name": "INSTRUCTIONS",
+      "type": "keyword"
+    },
+    {
+      "name": "INT",
+      "type": "keyword"
+    },
+    {
+      "name": "INTEGER",
+      "type": "keyword"
+    },
+    {
+      "name": "INTERVAL",
+      "type": "keyword"
+    },
+    {
+      "name": "INVISIBLE",
+      "type": "keyword"
+    },
+    {
+      "name": "IS",
+      "type": "keyword"
+    },
+    {
+      "name": "ISNODECOLUMN",
+      "type": "keyword"
+    },
+    {
+      "name": "ITEM",
+      "type": "keyword"
+    },
+    {
+      "name": "ITEMS",
+      "type": "keyword"
+    },
+    {
+      "name": "JUSTIFY",
+      "type": "keyword"
+    },
+    {
+      "name": "KEY",
+      "type": "keyword"
+    },
+    {
+      "name": "KEYBOARDHINT",
+      "type": "keyword"
+    },
+    {
+      "name": "KEYS",
+      "type": "keyword"
+    },
+    {
+      "name": "LABEL",
+      "type": "keyword"
+    },
+    {
+      "name": "LAYOUT",
+      "type": "keyword"
+    },
+    {
+      "name": "LEFT",
+      "type": "keyword"
+    },
+    {
+      "name": "LIKE",
+      "type": "keyword"
+    },
+    {
+      "name": "LINES",
+      "type": "keyword"
+    },
+    {
+      "name": "MAGENTA",
+      "type": "keyword"
+    },
+    {
+      "name": "MATCHES",
+      "type": "keyword"
+    },
+    {
+      "name": "MAX",
+      "type": "keyword"
+    },
+    {
+      "name": "MIN",
+      "type": "keyword"
+    },
+    {
+      "name": "MINHEIGHT",
+      "type": "keyword"
+    },
+    {
+      "name": "MINUTE",
+      "type": "keyword"
+    },
+    {
+      "name": "MINWIDTH",
+      "type": "keyword"
+    },
+    {
+      "name": "MONEY",
+      "type": "keyword"
+    },
+    {
+      "name": "MONTH",
+      "type": "keyword"
+    },
+    {
+      "name": "NO",
+      "type": "keyword"
+    },
+    {
+      "name": "NOENTRY",
+      "type": "keyword"
+    },
+    {
+      "name": "NONCOMPRESS",
+      "type": "keyword"
+    },
+    {
+      "name": "NONE",
+      "type": "keyword"
+    },
+    {
+      "name": "NORMAL",
+      "type": "keyword"
+    },
+    {
+      "name": "NOT",
+      "type": "keyword"
+    },
+    {
+      "name": "NOTEDITABLE",
+      "type": "keyword"
+    },
+    {
+      "name": "NOUPDATE",
+      "type": "keyword"
+    },
+    {
+      "name": "NULL",
+      "type": "keyword"
+    },
+    {
+      "name": "NUMBER",
+      "type": "keyword"
+    },
+    {
+      "name": "NUMERIC",
+      "type": "keyword"
+    },
+    {
+      "name": "OPTIONS",
+      "type": "keyword"
+    },
+    {
+      "name": "OR",
+      "type": "keyword"
+    },
+    {
+      "name": "ORIENTATION",
+      "type": "keyword"
+    },
+    {
+      "name": "PACKED",
+      "type": "keyword"
+    },
+    {
+      "name": "PAGE",
+      "type": "keyword"
+    },
+    {
+      "name": "PARENTIDCOLUMN",
+      "type": "keyword"
+    },
+    {
+      "name": "PHANTOM",
+      "type": "keyword"
+    },
+    {
+      "name": "PHONE",
+      "type": "keyword"
+    },
+    {
+      "name": "PICTURE",
+      "type": "keyword"
+    },
+    {
+      "name": "PIXELHEIGHT",
+      "type": "keyword"
+    },
+    {
+      "name": "PIXELS",
+      "type": "keyword"
+    },
+    {
+      "name": "PIXELWIDTH",
+      "type": "keyword"
+    },
+    {
+      "name": "PLACEHOLDER",
+      "type": "keyword"
+    },
+    {
+      "name": "POINTS",
+      "type": "keyword"
+    },
+    {
+      "name": "PRECISION",
+      "type": "keyword"
+    },
+    {
+      "name": "PROGRAM",
+      "type": "keyword"
+    },
+    {
+      "name": "PROGRESSBAR",
+      "type": "keyword"
+    },
+    {
+      "name": "PROPERTIES",
+      "type": "keyword"
+    },
+    {
+      "name": "QUERYCLEAR",
+      "type": "keyword"
+    },
+    {
+      "name": "QUERYEDITABLE",
+      "type": "keyword"
+    },
+    {
+      "name": "RADIOGROUP",
+      "type": "keyword"
+    },
+    {
+      "name": "REAL",
+      "type": "keyword"
+    },
+    {
+      "name": "RECORD",
+      "type": "keyword"
+    },
+    {
+      "name": "RED",
+      "type": "keyword"
+    },
+    {
+      "name": "REQUIRED",
+      "type": "keyword"
+    },
+    {
+      "name": "REVERSE",
+      "type": "keyword"
+    },
+    {
+      "name": "RIGHT",
+      "type": "keyword"
+    },
+    {
+      "name": "SAMPLE",
+      "type": "keyword"
+    },
+    {
+      "name": "SCHEMA",
+      "type": "keyword"
+    },
+    {
+      "name": "SCREEN",
+      "type": "keyword"
+    },
+    {
+      "name": "SCROLL",
+      "type": "keyword"
+    },
+    {
+      "name": "SCROLLBARS",
+      "type": "keyword"
+    },
+    {
+      "name": "SCROLLGRID",
+      "type": "keyword"
+    },
+    {
+      "name": "SECOND",
+      "type": "keyword"
+    },
+    {
+      "name": "SEPARATOR",
+      "type": "keyword"
+    },
+    {
+      "name": "SHIFT",
+      "type": "keyword"
+    },
+    {
+      "name": "SIZE",
+      "type": "keyword"
+    },
+    {
+      "name": "SIZEPOLICY",
+      "type": "keyword"
+    },
+    {
+      "name": "SLIDER",
+      "type": "keyword"
+    },
+    {
+      "name": "SMALLFLOAT",
+      "type": "keyword"
+    },
+    {
+      "name": "SMALLINT",
+      "type": "keyword"
+    },
+    {
+      "name": "SPACING",
+      "type": "keyword"
+    },
+    {
+      "name": "SPINEDIT",
+      "type": "keyword"
+    },
+    {
+      "name": "SPLITTER",
+      "type": "keyword"
+    },
+    {
+      "name": "STACK",
+      "type": "keyword"
+    },
+    {
+      "name": "STEP",
+      "type": "keyword"
+    },
+    {
+      "name": "STRETCH",
+      "type": "keyword"
+    },
+    {
+      "name": "STYLE",
+      "type": "keyword"
+    },
+    {
+      "name": "SUM",
+      "type": "keyword"
+    },
+    {
+      "name": "TABINDEX",
+      "type": "keyword"
+    },
+    {
+      "name": "TABLE",
+      "type": "keyword"
+    },
+    {
+      "name": "TABLES",
+      "type": "keyword"
+    },
+    {
+      "name": "TAG",
+      "type": "keyword"
+    },
+    {
+      "name": "TEXT",
+      "type": "keyword"
+    },
+    {
+      "name": "TEXTEDIT",
+      "type": "keyword"
+    },
+    {
+      "name": "THROUGH",
+      "type": "keyword"
+    },
+    {
+      "name": "THRU",
+      "type": "keyword"
+    },
+    {
+      "name": "TIMEEDIT",
+      "type": "keyword"
+    },
+    {
+      "name": "TIMESTAMP",
+      "type": "keyword"
+    },
+    {
+      "name": "TITLE",
+      "type": "keyword"
+    },
+    {
+      "name": "TO",
+      "type": "keyword"
+    },
+    {
+      "name": "TODAY",
+      "type": "keyword"
+    },
+    {
+      "name": "TOOLBAR",
+      "type": "keyword"
+    },
+    {
+      "name": "TOPMENU",
+      "type": "keyword"
+    },
+    {
+      "name": "TREE",
+      "type": "keyword"
+    },
+    {
+      "name": "TRUE",
+      "type": "keyword"
+    },
+    {
+      "name": "TYPE",
+      "type": "keyword"
+    },
+    {
+      "name": "UNDERLINE",
+      "type": "keyword"
+    },
+    {
+      "name": "UNHIDABLE",
+      "type": "keyword"
+    },
+    {
+      "name": "UNHIDABLECOLUMNS",
+      "type": "keyword"
+    },
+    {
+      "name": "UNMOVABLE",
+      "type": "keyword"
+    },
+    {
+      "name": "UNMOVABLECOLUMNS",
+      "type": "keyword"
+    },
+    {
+      "name": "UNSIZABLE",
+      "type": "keyword"
+    },
+    {
+      "name": "UNSIZABLECOLUMNS",
+      "type": "keyword"
+    },
+    {
+      "name": "UNSORTABLE",
+      "type": "keyword"
+    },
+    {
+      "name": "UNSORTABLECOLUMNS",
+      "type": "keyword"
+    },
+    {
+      "name": "UPSHIFT",
+      "type": "keyword"
+    },
+    {
+      "name": "URL",
+      "type": "keyword"
+    },
+    {
+      "name": "USER",
+      "type": "keyword"
+    },
+    {
+      "name": "VALIDATE",
+      "type": "keyword"
+    },
+    {
+      "name": "VALUECHECKED",
+      "type": "keyword"
+    },
+    {
+      "name": "VALUEMAX",
+      "type": "keyword"
+    },
+    {
+      "name": "VALUEMIN",
+      "type": "keyword"
+    },
+    {
+      "name": "VALUEUNCHECKED",
+      "type": "keyword"
+    },
+    {
+      "name": "VARCHAR",
+      "type": "keyword"
+    },
+    {
+      "name": "VARIABLE",
+      "type": "keyword"
+    },
+    {
+      "name": "VBOX",
+      "type": "keyword"
+    },
+    {
+      "name": "VERIFY",
+      "type": "keyword"
+    },
+    {
+      "name": "VERSION",
+      "type": "keyword"
+    },
+    {
+      "name": "VERTICAL",
+      "type": "keyword"
+    },
+    {
+      "name": "WANTFIXEDPAGESIZE",
+      "type": "keyword"
+    },
+    {
+      "name": "WANTNORETURNS",
+      "type": "keyword"
+    },
+    {
+      "name": "WANTTABS",
+      "type": "keyword"
+    },
+    {
+      "name": "WEBCOMPONENT",
+      "type": "keyword"
+    },
+    {
+      "name": "WHERE",
+      "type": "keyword"
+    },
+    {
+      "name": "WHITE",
+      "type": "keyword"
+    },
+    {
+      "name": "WIDGET",
+      "type": "keyword"
+    },
+    {
+      "name": "WIDTH",
+      "type": "keyword"
+    },
+    {
+      "name": "WINDOWSTYLE",
+      "type": "keyword"
+    },
+    {
+      "name": "WITHOUT",
+      "type": "keyword"
+    },
+    {
+      "name": "WORDWRAP",
+      "type": "keyword"
+    },
+    {
+      "name": "X",
+      "type": "keyword"
+    },
+    {
+      "name": "XEDIT",
+      "type": "keyword"
+    },
+    {
+      "name": "Y",
+      "type": "keyword"
+    },
+    {
+      "name": "YEAR",
+      "type": "keyword"
+    },
+    {
+      "name": "YELLOW",
+      "type": "keyword"
+    },
+    {
+      "name": "YES",
+      "type": "keyword"
+    },
+    {
+      "name": "ZEROFILL",
+      "type": "keyword"
+    }
+  ]
+}

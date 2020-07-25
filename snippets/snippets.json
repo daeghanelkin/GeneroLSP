@@ -9,6 +9,11 @@
     "body": ["function ${1:functionName}($2)", "\t$0", "end function"],
     "description": "Function Declaration"
   },
+  "METHOD Declaration": {
+    "prefix": ["function"],
+    "body": ["function ($1) ${2:functionName}($3)", "\t$0", "end function"],
+    "description": "Method Declatation"
+  },
   "IF-ELSE Statement": {
     "prefix": ["if else"],
     "body": ["if ($1) then", "\t$2", "else", "\t$3", "end if"],

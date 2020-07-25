@@ -26,9 +26,9 @@
         ["(", ")"],
         ["\"", "\""],
         ["'", "'"]
-    ],
+    ]/*,
     "indentationRules": {
-        "increaseIndentPattern": "\\b(function|report|main|then|case|for|while|if)\\b",
-        "decreaseIndentPattern": "\\b(end\\s+(function|report|main|if|case|for|while))\\b",
-    }
+        "increaseIndentPattern": "(function|report|main|then|case|for|while|if)\\b",
+        "decreaseIndentPattern": "\\b(end\\s+(function|report|main|if|case|for|while)\\b)",
+    }*/
 }

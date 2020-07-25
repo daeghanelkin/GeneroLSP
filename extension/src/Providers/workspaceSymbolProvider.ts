@@ -1,7 +1,9 @@
-import {WorkspaceSymbolProvider, TextDocument, SymbolInformation} from "vscode";
+import * as vscode from "vscode";
 
-/*export default class GoWorkspaceSymbolProvider implements WorkspaceSymbolProvider {
-    public provideWorkspaceSymbols(document: TextDocument): SymbolInformation[] {
-        
+export default class GoWorkspaceSymbolProvider implements vscode.WorkspaceSymbolProvider {
+    public provideWorkspaceSymbols(query: string): Thenable<vscode.SymbolInformation[]> {
+       return new Promise((resolve, reject) => {
+
+       });
     } 
-}*/
+}
