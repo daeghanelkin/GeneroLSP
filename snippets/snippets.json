@@ -1,17 +1,17 @@
 {
   "IF Statement": {
     "prefix": ["if"],
-    "body": ["if ($1) then", "\t$0", "end if"],
+    "body": ["if ($1) then", "\t${TM_SELECTED_TEXT}$0", "end if"],
     "description": "IF Statement"
   },
   "FUNCTION Declaration": {
     "prefix": ["function"],
-    "body": ["function ${1:functionName}($2)", "\t$0", "end function"],
+    "body": ["${1:public }function ${2:functionName}($3)", "\t${TM_SELECTED_TEXT}$0", "end function"],
     "description": "Function Declaration"
   },
   "METHOD Declaration": {
     "prefix": ["function"],
-    "body": ["function ($1) ${2:functionName}($3)", "\t$0", "end function"],
+    "body": ["${1:public }function ($2) ${3:functionName}($4)", "\t${TM_SELECTED_TEXT}$0", "end function"],
     "description": "Method Declatation"
   },
   "IF-ELSE Statement": {
@@ -21,12 +21,12 @@
   },
   "FOR Loop": {
     "prefix": ["for"],
-    "body": ["for ${1:counter} = ${2:startValue} to ${3:endValue}", "\t$0", "end for"],
+    "body": ["for ${1:counter} = ${2:startValue} to ${3:endValue}", "\t${TM_SELECTED_TEXT}$0", "end for"],
     "description": "FOR Loop"
   },
   "WHILE Loop": {
     "prefix": ["while"],
-    "body": ["while (${1:condition})", "\t$0", "end while"],
+    "body": ["while (${1:condition})", "\t${TM_SELECTED_TEXT}$0", "end while"],
     "description": "WHILE Loop"
   },
   "CASE Statement": {
@@ -43,5 +43,40 @@
     "prefix": ["execute"],
     "body": ["execute ${1:queryName}", " using $2", "\tinto $3", "ExceptionState.setSQLException(\"$4\")"],
     "description": "EXECUTE Query"
+  },
+  "DOCUMENTATION comment block": {
+    "prefix": ["comment"],
+    "body": [
+      "################################################################################",
+      "#+ <${1:FUNCTION} name=\"$2\" scope=\"$3\">",
+      "#+    <summary>",
+      "#+       ${4:Summary of the function}",
+      "#+    </summary>",
+      "#+    <params>",
+      "#+       <param name=\"$5\" type=\"$6\">",
+      "#+          ${7:Description of parameter}",
+      "#+       </param>",
+      "#+    </params>",
+      "#+    <returns>",
+      "#+       <return name=\"$8\" type=\"$9\">",
+      "#+          ${10:Description of the return}",
+      "#+       </return>",
+      "#+    </returns>",
+      "#+    <notes>",
+      "#+       ${11:Any notes about this function/report/constant/macro or it's purpose}",
+      "#+    </notes>",
+      "#+    <warning>",
+      "#+       ${12:Any warnings about this function/report/constant/macro or it's returns}",
+      "#+    </warning>",
+      "#+    <example>",
+      "#+       ${13:Example usage of this function/report/constant/macro}",
+      "#+    </example>",
+      "#+    <seealso>",
+      "#+       ${14:Other functions/reports/constants/macros to reference}",
+      "#+    </seealso>",
+      "#+ </${1:FUNCTION}>",
+      "################################################################################"
+    ],
+    "description": "DOCUMENTATION comment block"
   }
 }

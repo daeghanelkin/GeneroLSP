@@ -1,0 +1,1340 @@
+[
+    {
+        "name": "ABSOLUTE",
+        "type": "keyword"
+    },
+    {
+        "name": "ACCELERATOR"
+    },
+    {
+        "name": "ACCEPT"
+    },
+    {
+        "name": "ACCESSORYTYPE"
+    },
+    {
+        "name": "ACTION"
+    },
+    {
+        "name": "ACTIONS"
+    },
+    {
+        "name": "ADD"
+    },
+    {
+        "name": "AFTER"
+    },
+    {
+        "name": "ALL"
+    },
+    {
+        "name": "ALTER"
+    },
+    {
+        "name": "AND"
+    },
+    {
+        "name": "ANSI"
+    },
+    {
+        "name": "ANY"
+    },
+    {
+        "name": "APPEND"
+    },
+    {
+        "name": "APPLICATION"
+    },
+    {
+        "name": "ARRAY",
+        "type": "keyword"
+    },
+    {
+        "name": "AS"
+    },
+    {
+        "name": "ASC"
+    },
+    {
+        "name": "ASCENDING"
+    },
+    {
+        "name": "ASCII"
+    },
+    {
+        "name": "AT"
+    },
+    {
+        "name": "ATTRIBUTE"
+    },
+    {
+        "name": "ATTRIBUTES"
+    },
+    {
+        "name": "AUDIT"
+    },
+    {
+        "name": "AUTHORIZATION"
+    },
+    {
+        "name": "AUTO"
+    },
+    {
+        "name": "AVG"
+    },
+    {
+        "name": "BEFORE"
+    },
+    {
+        "name": "BEGIN"
+    },
+    {
+        "name": "BETWEEN"
+    },
+    {
+        "name": "BIGINT",
+        "type": "keyword"
+    },
+    {
+        "name": "BIGSERIAL"
+    },
+    {
+        "name": "BLACK",
+        "type": "color"
+    },
+    {
+        "name": "BLINK"
+    },
+    {
+        "name": "BLUE",
+        "type": "color"
+    },
+    {
+        "name": "BOLD"
+    },
+    {
+        "name": "BOOLEAN",
+        "type": "keyword"
+    },
+    {
+        "name": "BORDER"
+    },
+    {
+        "name": "BOTTOM"
+    },
+    {
+        "name": "BREAKPOINT"
+    },
+    {
+        "name": "BUFFER"
+    },
+    {
+        "name": "BUFFERED"
+    },
+    {
+        "name": "BY"
+    },
+    {
+        "name": "BYTE",
+        "type": "keyword"
+    },
+    {
+        "name": "CACHE"
+    },
+    {
+        "name": "CALL"
+    },
+    {
+        "name": "CANCEL"
+    },
+    {
+        "name": "CASCADE"
+    },
+    {
+        "name": "CASE"
+    },
+    {
+        "name": "CAST"
+    },
+    {
+        "name": "CATCH"
+    },
+    {
+        "name": "CENTURY"
+    },
+    {
+        "name": "CHANGE"
+    },
+    {
+        "name": "CHAR",
+        "type": "keyword"
+    },
+    {
+        "name": "CHARACTER",
+        "type": "keyword"
+    },
+    {
+        "name": "CHECK"
+    },
+    {
+        "name": "CHECKMARK"
+    },
+    {
+        "name": "CIRCUIT"
+    },
+    {
+        "name": "CLEAR"
+    },
+    {
+        "name": "CLIPPED"
+    },
+    {
+        "name": "CLOSE"
+    },
+    {
+        "name": "CLUSTER"
+    },
+    {
+        "name": "COLLAPSE"
+    },
+    {
+        "name": "COLUMN"
+    },
+    {
+        "name": "COLUMNS"
+    },
+    {
+        "name": "COMMAND"
+    },
+    {
+        "name": "COMMENT"
+    },
+    {
+        "name": "COMMIT"
+    },
+    {
+        "name": "COMMITTED"
+    },
+    {
+        "name": "CONCURRENT"
+    },
+    {
+        "name": "CONNECT"
+    },
+    {
+        "name": "CONNECTION"
+    },
+    {
+        "name": "CONSTANT",
+        "type": "keyword",
+        "description": "The CONSTANT instruction defines a program constant.",
+        "documentation": "https://4js.com/online_documentation/fjs-fgl-manual-html/#fgl-topics/c_fgl_Constants_003.html"
+    },
+    {
+        "name": "CONSTRAINED"
+    },
+    {
+        "name": "CONSTRAINT"
+    },
+    {
+        "name": "CONSTRUCT"
+    },
+    {
+        "name": "CONTEXTMENU"
+    },
+    {
+        "name": "CONTINUE"
+    },
+    {
+        "name": "CONTROL"
+    },
+    {
+        "name": "COUNT"
+    },
+    {
+        "name": "CREATE"
+    },
+    {
+        "name": "CROSS"
+    },
+    {
+        "name": "CURRENT"
+    },
+    {
+        "name": "CURSOR"
+    },
+    {
+        "name": "CYAN",
+        "type": "color"
+    },
+    {
+        "name": "CYCLE"
+    },
+    {
+        "name": "DATABASE",
+        "type": "keyword",
+        "description": "Opens a new database connection in unique-session mode.",
+        "documentation": "https://4js.com/online_documentation/fjs-fgl-manual-html/#fgl-topics/c_fgl_Connections_040.html"
+    },
+    {
+        "name": "DATE"
+    },
+    {
+        "name": "DATETIME"
+    },
+    {
+        "name": "DAY"
+    },
+    {
+        "name": "DBA"
+    },
+    {
+        "name": "DBSERVERNAME"
+    },
+    {
+        "name": "DEC",
+        "type": "keyword"
+    },
+    {
+        "name": "DECIMAL",
+        "type": "keyword"
+    },
+    {
+        "name": "DECLARE"
+    },
+    {
+        "name": "DEFAULT"
+    },
+    {
+        "name": "DEFAULTS"
+    },
+    {
+        "name": "DEFAULTVIEW"
+    },
+    {
+        "name": "DEFER"
+    },
+    {
+        "name": "DEFINE",
+        "type": "keyword",
+        "description": "A variable contains volatile information of a specific data type.",
+        "documentation": "https://4js.com/online_documentation/fjs-fgl-manual-html/#fgl-topics/c_fgl_variables_DEFINE.html"
+    },
+    {
+        "name": "DELETE"
+    },
+    {
+        "name": "DELIMITER"
+    },
+    {
+        "name": "DESC"
+    },
+    {
+        "name": "DESCENDING"
+    },
+    {
+        "name": "DESCRIBE"
+    },
+    {
+        "name": "DESTINATION"
+    },
+    {
+        "name": "DETAILACTION"
+    },
+    {
+        "name": "DETAILBUTTON"
+    },
+    {
+        "name": "DIALOG"
+    },
+    {
+        "name": "DICTIONARY"
+    },
+    {
+        "name": "DIM"
+    },
+    {
+        "name": "DIMENSION"
+    },
+    {
+        "name": "DIRTY"
+    },
+    {
+        "name": "DISCLOSUREINDICATOR"
+    },
+    {
+        "name": "DISCONNECT"
+    },
+    {
+        "name": "DISPLAY"
+    },
+    {
+        "name": "DISTINCT"
+    },
+    {
+        "name": "DORMANT"
+    },
+    {
+        "name": "DOUBLE",
+        "type": "keyword"
+    },
+    {
+        "name": "DOUBLECLICK"
+    },
+    {
+        "name": "DOWN"
+    },
+    {
+        "name": "DRAG_ENTER"
+    },
+    {
+        "name": "DRAG_FINISHED"
+    },
+    {
+        "name": "DRAG_OVER"
+    },
+    {
+        "name": "DRAG_START"
+    },
+    {
+        "name": "DROP"
+    },
+    {
+        "name": "DYNAMIC",
+        "type": "keyword"
+    },
+    {
+        "name": "ELSE"
+    },
+    {
+        "name": "END"
+    },
+    {
+        "name": "ERROR"
+    },
+    {
+        "name": "ESCAPE"
+    },
+    {
+        "name": "EVERY"
+    },
+    {
+        "name": "EXCLUSIVE"
+    },
+    {
+        "name": "EXECUTE"
+    },
+    {
+        "name": "EXISTS"
+    },
+    {
+        "name": "EXIT"
+    },
+    {
+        "name": "EXPAND"
+    },
+    {
+        "name": "EXPLAIN"
+    },
+    {
+        "name": "EXTEND"
+    },
+    {
+        "name": "EXTENT"
+    },
+    {
+        "name": "EXTERNAL"
+    },
+    {
+        "name": "FALSE",
+        "type": "constant"
+    },
+    {
+        "name": "FETCH"
+    },
+    {
+        "name": "FGL"
+    },
+    {
+        "name": "FGL_DRAWBOX"
+    },
+    {
+        "name": "FIELD"
+    },
+    {
+        "name": "FIELD_TOUCHED"
+    },
+    {
+        "name": "FILE"
+    },
+    {
+        "name": "FILL"
+    },
+    {
+        "name": "FINISH"
+    },
+    {
+        "name": "FIRST"
+    },
+    {
+        "name": "FLOAT",
+        "type": "keyword"
+    },
+    {
+        "name": "FLUSH"
+    },
+    {
+        "name": "FOCUSONFIELD"
+    },
+    {
+        "name": "FOR"
+    },
+    {
+        "name": "FOREACH"
+    },
+    {
+        "name": "FOREIGN"
+    },
+    {
+        "name": "FORM"
+    },
+    {
+        "name": "FORMAT"
+    },
+    {
+        "name": "FOUND"
+    },
+    {
+        "name": "FRACTION"
+    },
+    {
+        "name": "FREE"
+    },
+    {
+        "name": "FROM"
+    },
+    {
+        "name": "FULL"
+    },
+    {
+        "name": "FUNCTION",
+        "type": "keyword",
+        "description": "A FUNCTION definition defines a named procedure with a set of statements.",
+        "documentation": "https://4js.com/online_documentation/fjs-fgl-manual-html/#fgl-topics/c_fgl_Functions_syntax.html"
+    },
+    {
+        "name": "GET_FLDBUF",
+        "type": "operator"
+    },
+    {
+        "name": "GLOBALS"
+    },
+    {
+        "name": "GO"
+    },
+    {
+        "name": "GOTO"
+    },
+    {
+        "name": "GRANT"
+    },
+    {
+        "name": "GREEN",
+        "type": "color"
+    },
+    {
+        "name": "GROUP"
+    },
+    {
+        "name": "HANDLER"
+    },
+    {
+        "name": "HAVING"
+    },
+    {
+        "name": "HEADER"
+    },
+    {
+        "name": "HELP"
+    },
+    {
+        "name": "HIDE"
+    },
+    {
+        "name": "HOLD"
+    },
+    {
+        "name": "HOUR"
+    },
+    {
+        "name": "IDLE"
+    },
+    {
+        "name": "IF"
+    },
+    {
+        "name": "IIF"
+    },
+    {
+        "name": "IMAGE"
+    },
+    {
+        "name": "IMMEDIATE"
+    },
+    {
+        "name": "IMPORT"
+    },
+    {
+        "name": "IN"
+    },
+    {
+        "name": "INCREMENT"
+    },
+    {
+        "name": "INDEX"
+    },
+    {
+        "name": "INFIELD"
+    },
+    {
+        "name": "INITIALIZE"
+    },
+    {
+        "name": "INNER"
+    },
+    {
+        "name": "INOUT"
+    },
+    {
+        "name": "INPUT"
+    },
+    {
+        "name": "INSERT"
+    },
+    {
+        "name": "INSTANCEOF"
+    },
+    {
+        "name": "INT",
+        "type": "keyword"
+    },
+    {
+        "name": "INT8",
+        "type": "keyword"
+    },
+    {
+        "name": "INTEGER",
+        "type": "keyword"
+    },
+    {
+        "name": "INTERFACE"
+    },
+    {
+        "name": "INTERRUPT"
+    },
+    {
+        "name": "INTERVAL"
+    },
+    {
+        "name": "INTO"
+    },
+    {
+        "name": "INVISIBLE"
+    },
+    {
+        "name": "IS"
+    },
+    {
+        "name": "ISOLATION"
+    },
+    {
+        "name": "JAVA"
+    },
+    {
+        "name": "JOIN"
+    },
+    {
+        "name": "KEEP"
+    },
+    {
+        "name": "KEY"
+    },
+    {
+        "name": "LABEL"
+    },
+    {
+        "name": "LAST"
+    },
+    {
+        "name": "LEFT"
+    },
+    {
+        "name": "LENGTH"
+    },
+    {
+        "name": "LET"
+    },
+    {
+        "name": "LIKE"
+    },
+    {
+        "name": "LIMIT"
+    },
+    {
+        "name": "LINE"
+    },
+    {
+        "name": "LINENO"
+    },
+    {
+        "name": "LINES"
+    },
+    {
+        "name": "LOAD"
+    },
+    {
+        "name": "LOCATE"
+    },
+    {
+        "name": "LOCK"
+    },
+    {
+        "name": "LOCKS"
+    },
+    {
+        "name": "LOG"
+    },
+    {
+        "name": "LSTR"
+    },
+    {
+        "name": "LVARCHAR",
+        "type": "keyword"
+    },
+    {
+        "name": "MAGENTA",
+        "type": "color",
+        "description": "The color MAGENTA used with the COLOR attribute.",
+        "documentation": "https://4js.com/online_documentation/fjs-fgl-manual-html/#fgl-topics/c_fgl_FSFAttributes_COLOR.html"
+    },
+    {
+        "name": "MAIN",
+        "type": "keyword",
+        "description": "The MAIN block is the starting point of the program.",
+        "documentation": "https://4js.com/online_documentation/fjs-fgl-manual-html/#fgl-topics/c_fgl_programs_MAIN.html"
+    },
+    {
+        "name": "MARGIN"
+    },
+    {
+        "name": "MATCHES"
+    },
+    {
+        "name": "MAX"
+    },
+    {
+        "name": "MAXCOUNT"
+    },
+    {
+        "name": "MAXVALUE"
+    },
+    {
+        "name": "MDY"
+    },
+    {
+        "name": "MEMORY"
+    },
+    {
+        "name": "MENU"
+    },
+    {
+        "name": "MESSAGE"
+    },
+    {
+        "name": "MIDDLE"
+    },
+    {
+        "name": "MIN"
+    },
+    {
+        "name": "MINUTE"
+    },
+    {
+        "name": "MINVALUE"
+    },
+    {
+        "name": "MOD"
+    },
+    {
+        "name": "MODE"
+    },
+    {
+        "name": "MODIFY"
+    },
+    {
+        "name": "MONEY"
+    },
+    {
+        "name": "MONTH"
+    },
+    {
+        "name": "NAME"
+    },
+    {
+        "name": "NATURAL"
+    },
+    {
+        "name": "NAVIGATOR"
+    },
+    {
+        "name": "NCHAR"
+    },
+    {
+        "name": "NEED"
+    },
+    {
+        "name": "NEXT"
+    },
+    {
+        "name": "NO"
+    },
+    {
+        "name": "NOCACHE"
+    },
+    {
+        "name": "NOCYCLE"
+    },
+    {
+        "name": "NOMAXVALUE"
+    },
+    {
+        "name": "NOMINVALUE"
+    },
+    {
+        "name": "NOORDER"
+    },
+    {
+        "name": "NORMAL"
+    },
+    {
+        "name": "NOT"
+    },
+    {
+        "name": "NOTFOUND"
+    },
+    {
+        "name": "NULL"
+    },
+    {
+        "name": "NUMERIC"
+    },
+    {
+        "name": "NVARCHAR"
+    },
+    {
+        "name": "NVL"
+    },
+    {
+        "name": "OF"
+    },
+    {
+        "name": "OFF"
+    },
+    {
+        "name": "ON"
+    },
+    {
+        "name": "OPEN"
+    },
+    {
+        "name": "OPTION"
+    },
+    {
+        "name": "OPTIONS"
+    },
+    {
+        "name": "OR"
+    },
+    {
+        "name": "ORD"
+    },
+    {
+        "name": "ORDER"
+    },
+    {
+        "name": "OTHERWISE"
+    },
+    {
+        "name": "OUT"
+    },
+    {
+        "name": "OUTER"
+    },
+    {
+        "name": "OUTPUT"
+    },
+    {
+        "name": "PAGE"
+    },
+    {
+        "name": "PAGENO"
+    },
+    {
+        "name": "PAUSE"
+    },
+    {
+        "name": "PERCENT"
+    },
+    {
+        "name": "PICTURE"
+    },
+    {
+        "name": "PIPE"
+    },
+    {
+        "name": "POPUP"
+    },
+    {
+        "name": "PRECISION"
+    },
+    {
+        "name": "PREPARE"
+    },
+    {
+        "name": "PREVIOUS"
+    },
+    {
+        "name": "PRIMARY"
+    },
+    {
+        "name": "PRINT"
+    },
+    {
+        "name": "PRINTER"
+    },
+    {
+        "name": "PRINTX"
+    },
+    {
+        "name": "PRIOR"
+    },
+    {
+        "name": "PRIVATE"
+    },
+    {
+        "name": "PRIVILEGES"
+    },
+    {
+        "name": "PROCEDURE"
+    },
+    {
+        "name": "PROGRAM"
+    },
+    {
+        "name": "PROMPT"
+    },
+    {
+        "name": "PUBLIC"
+    },
+    {
+        "name": "PUT"
+    },
+    {
+        "name": "QUIT"
+    },
+    {
+        "name": "RAISE"
+    },
+    {
+        "name": "READ"
+    },
+    {
+        "name": "REAL",
+        "type": "keyword"
+    },
+    {
+        "name": "RECORD",
+        "type": "keyword"
+    },
+    {
+        "name": "RECOVER"
+    },
+    {
+        "name": "RED",
+        "type": "color"
+    },
+    {
+        "name": "REFERENCES"
+    },
+    {
+        "name": "RELATIVE"
+    },
+    {
+        "name": "RELEASE"
+    },
+    {
+        "name": "RENAME"
+    },
+    {
+        "name": "REOPTIMIZATION"
+    },
+    {
+        "name": "REPEATABLE"
+    },
+    {
+        "name": "REPORT"
+    },
+    {
+        "name": "RESOURCE"
+    },
+    {
+        "name": "RESTART"
+    },
+    {
+        "name": "RETAIN"
+    },
+    {
+        "name": "RETURN"
+    },
+    {
+        "name": "RETURNING"
+    },
+    {
+        "name": "RETURNS"
+    },
+    {
+        "name": "REVERSE"
+    },
+    {
+        "name": "REVOKE"
+    },
+    {
+        "name": "RIGHT"
+    },
+    {
+        "name": "ROLLBACK"
+    },
+    {
+        "name": "ROLLFORWARD"
+    },
+    {
+        "name": "ROW"
+    },
+    {
+        "name": "ROWBOUND"
+    },
+    {
+        "name": "ROWS"
+    },
+    {
+        "name": "RUN"
+    },
+    {
+        "name": "SAVEPOINT"
+    },
+    {
+        "name": "SCHEMA",
+        "type": "keyword",
+        "description": "Defines the database schema files to be used for compilation.",
+        "documentation": "https://4js.com/online_documentation/fjs-fgl-manual-html/#fgl-topics/c_fgl_DatabaseSchema_SCHEMA.html"
+    },
+    {
+        "name": "SCREEN"
+    },
+    {
+        "name": "SCROLL"
+    },
+    {
+        "name": "SECOND"
+    },
+    {
+        "name": "SELECT"
+    },
+    {
+        "name": "SELECTION"
+    },
+    {
+        "name": "SEQUENCE"
+    },
+    {
+        "name": "SERIAL"
+    },
+    {
+        "name": "SERIAL8"
+    },
+    {
+        "name": "SESSION"
+    },
+    {
+        "name": "SET"
+    },
+    {
+        "name": "SFMT"
+    },
+    {
+        "name": "SHARE"
+    },
+    {
+        "name": "SHIFT"
+    },
+    {
+        "name": "SHORT"
+    },
+    {
+        "name": "SHOW"
+    },
+    {
+        "name": "SIGNAL"
+    },
+    {
+        "name": "SITENAME"
+    },
+    {
+        "name": "SIZE"
+    },
+    {
+        "name": "SKIP"
+    },
+    {
+        "name": "SLEEP"
+    },
+    {
+        "name": "SMALLFLOAT"
+    },
+    {
+        "name": "SMALLINT"
+    },
+    {
+        "name": "SOME"
+    },
+    {
+        "name": "SORT"
+    },
+    {
+        "name": "SPACE"
+    },
+    {
+        "name": "SPACES"
+    },
+    {
+        "name": "SQL"
+    },
+    {
+        "name": "SQLERRMESSAGE",
+        "type": "variable",
+        "description": "The SQLERRMESSAGE variable holds the error message corresponding to the last SQL error.",
+        "documentation": "https://4js.com/online_documentation/fjs-fgl-manual-html/#fgl-topics/c_fgl_operators_SQLERRMESSAGE.html"
+    },
+    {
+        "name": "SQLERROR"
+    },
+    {
+        "name": "SQLSTATE",
+        "type": "variable",
+        "description": "The SQLSTATE variable returns the code corresponding to the last SQL error.",
+        "documentation": "https://4js.com/online_documentation/fjs-fgl-manual-html/#fgl-topics/c_fgl_operators_SQLSTATE.html"
+    },
+    {
+        "name": "STABILITY"
+    },
+    {
+        "name": "START"
+    },
+    {
+        "name": "START_WITH"
+    },
+    {
+        "name": "STATISTICS"
+    },
+    {
+        "name": "STEP"
+    },
+    {
+        "name": "STOP"
+    },
+    {
+        "name": "STRING"
+    },
+    {
+        "name": "STYLE"
+    },
+    {
+        "name": "SUBDIALOG"
+    },
+    {
+        "name": "SUM"
+    },
+    {
+        "name": "SYNONYM"
+    },
+    {
+        "name": "TABLE"
+    },
+    {
+        "name": "TEMP"
+    },
+    {
+        "name": "TERMINATE"
+    },
+    {
+        "name": "TEXT"
+    },
+    {
+        "name": "THEN"
+    },
+    {
+        "name": "THROUGH"
+    },
+    {
+        "name": "THRU"
+    },
+    {
+        "name": "TIME"
+    },
+    {
+        "name": "TIMER"
+    },
+    {
+        "name": "TINYINT"
+    },
+    {
+        "name": "TO"
+    },
+    {
+        "name": "TODAY",
+        "type": "operator"
+    },
+    {
+        "name": "TOP"
+    },
+    {
+        "name": "TRAILER"
+    },
+    {
+        "name": "TRANSACTION"
+    },
+    {
+        "name": "TRUE",
+        "type": "constant"
+    },
+    {
+        "name": "TRUNCATE"
+    },
+    {
+        "name": "TRUSTED"
+    },
+    {
+        "name": "TRY"
+    },
+    {
+        "name": "TYPE"
+    },
+    {
+        "name": "UNBUFFERED"
+    },
+    {
+        "name": "UNCONSTRAINED"
+    },
+    {
+        "name": "UNDERLINE"
+    },
+    {
+        "name": "UNION"
+    },
+    {
+        "name": "UNIQUE"
+    },
+    {
+        "name": "UNITS"
+    },
+    {
+        "name": "UNLOAD"
+    },
+    {
+        "name": "UNLOCK"
+    },
+    {
+        "name": "UP"
+    },
+    {
+        "name": "UPDATE"
+    },
+    {
+        "name": "USER"
+    },
+    {
+        "name": "USING"
+    },
+    {
+        "name": "VALIDATE"
+    },
+    {
+        "name": "VALUE"
+    },
+    {
+        "name": "VALUES"
+    },
+    {
+        "name": "VARCHAR",
+        "type": "keyword"
+    },
+    {
+        "name": "VIEW"
+    },
+    {
+        "name": "WAIT"
+    },
+    {
+        "name": "WAITING"
+    },
+    {
+        "name": "WARNING"
+    },
+    {
+        "name": "WEEKDAY"
+    },
+    {
+        "name": "WHEN"
+    },
+    {
+        "name": "WHENEVER"
+    },
+    {
+        "name": "WHERE"
+    },
+    {
+        "name": "WHILE"
+    },
+    {
+        "name": "WHITE",
+        "type": "color"
+    },
+    {
+        "name": "WINDOW"
+    },
+    {
+        "name": "WITH"
+    },
+    {
+        "name": "WITHOUT"
+    },
+    {
+        "name": "WORDWRAP"
+    },
+    {
+        "name": "WORK"
+    },
+    {
+        "name": "WRAP"
+    },
+    {
+        "name": "XML"
+    },
+    {
+        "name": "YEAR"
+    },
+    {
+        "name": "YELLOW",
+        "type": "color"
+    }
+]

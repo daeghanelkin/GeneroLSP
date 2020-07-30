@@ -1,0 +1,1 @@
+{"version":3,"file":"workspaceSymbolProvider.js","sourceRoot":"","sources":["../../src/Providers/workspaceSymbolProvider.ts"],"names":[],"mappings":";;AAEA,MAAqB,yBAAyB;IACnC,uBAAuB,CAAC,KAAa;QACzC,OAAO,IAAI,OAAO,CAAC,CAAC,OAAO,EAAE,MAAM,EAAE,EAAE;QAEvC,CAAC,CAAC,CAAC;IACN,CAAC;CACJ;AAND,4CAMC"}

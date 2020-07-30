@@ -1,0 +1,51 @@
+{
+  "$schema": "./GeneroPackageSchema.json",
+  "name": "ui",
+  "type": "built-in",
+  "classes": [
+    {
+      "name": "Interface"
+    },
+    {
+      "name": "Window",
+      "description": "The ui.Window class provides an interface to the window objects create with the OPEN WINDOW instruction.",
+      "documentation": "c_fgl_ClassWindow.html",
+      "minimumLanguageVersion": "none",
+      "maximumLanguageVersion": "latest",
+      "classMethods": [
+        {
+          "name": "forName",
+          "description": "Get a window object by name.",
+          "documentation": "c_fgl_ClassWindow_forName.html",
+          "minimumLanguageVersion": "none",
+          "maximumLanguageVersion": "latest",
+          "parameters": [
+            {
+              "name": "name",
+              "type": "STRING",
+              "description": "Defines the name of the window."
+            }
+          ],
+          "returns": [
+            {
+              "type": "ui.Window",
+              "description": "Window object."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Form"
+    },
+    {
+      "name": "Dialog"
+    },
+    {
+      "name": "ComboBox"
+    },
+    {
+      "name": "DragDrop"
+    }
+  ]
+}

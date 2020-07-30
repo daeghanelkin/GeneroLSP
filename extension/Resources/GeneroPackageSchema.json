@@ -1,0 +1,174 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema",
+  "title": "Package Schema",
+  "description": "JSON Schema for Genero Packages",
+  "type": "object",
+  "allOf": [
+    {
+      "properties": {
+        "type": {
+          "description": "Type of package",
+          "type": "string",
+          "enum": [
+            "built-in",
+            "external"
+          ]
+        },
+        "classes": {
+          "description": "List of classes available in the package",
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/class"
+          }
+        }
+      }
+    },
+    {
+      "$ref": "#/definitions/basicInfo"
+    }
+  ],
+  "definitions": {
+    "class": {
+      "description": "Class of a package",
+      "type": "object",
+      "allOf": [
+        {
+          "properties": {
+            "classMethods": {
+              "description": "Methods available as a class",
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/classMethod"
+              }
+            },
+            "objectMethods": {
+              "description": "Methods available as an object",
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/objectMethod"
+              }
+            }
+          }
+        },
+        {
+          "$ref": "#/definitions/basicInfo"
+        }
+      ],
+      "required": [
+        "name"
+      ]
+    },
+    "classMethod": {
+      "description": "Method available as a class",
+      "type": "object",
+      "$ref": "#/definitions/method"
+    },
+    "objectMethod": {
+      "description": "Method available as an object",
+      "type": "object",
+      "$ref": "#/definitions/method"
+    },
+    "parameter": {
+      "description": "Method parameter",
+      "type": "object",
+      "properties": {
+        "name": {
+          "description": "Parameter name",
+          "type": "string"
+        },
+        "type": {
+          "description": "Parameter data type",
+          "type": "string"
+        },
+        "description": {
+          "description": "Description of the parameter",
+          "type": "string"
+        }
+      },
+      "required": [
+        "name",
+        "type"
+      ]
+    },
+    "return": {
+      "description": "Method return",
+      "type": "object",
+      "properties": {
+        "type": {
+          "description": "Return data type",
+          "type": "string"
+        },
+        "description": {
+          "description": "Description of the return",
+          "type": "string"
+        }
+      },
+      "required": [
+        "type"
+      ]
+    },
+    "method": {
+      "description": "Method of a package class",
+      "type": "object",
+      "allOf": [
+        {
+          "properties": {
+            "parameters": {
+              "description": "Parameters of the method",
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/parameter"
+              }
+            },
+            "returns": {
+              "description": "Returns of the method",
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/return"
+              }
+            }
+          }
+        },
+        {
+          "$ref": "#/definitions/basicInfo"
+        }
+      ],
+      "required": [
+        "name"
+      ]
+    },
+    "basicInfo": {
+      "type": "object",
+      "properties": {
+        "name": {
+          "description": "Name of the package/class/method",
+          "type": "string"
+        },
+        "description": {
+          "description": "Description of the package/class/method",
+          "type": "string"
+        },
+        "documentation": {
+          "description": "HTML link to the documentation for the package/class/method",
+          "type": "string",
+          "pattern": "(?i)\\.html$"
+        },
+        "minimumLanguageVersion": {
+          "description": "Minimum Genero version the package/class/method is available in",
+          "type": "string",
+          "default": "none"
+        },
+        "maximumLanguageVersion": {
+          "description": "Maximum Genero version the package/class/method is available in",
+          "type": "string",
+          "default": "latest"
+        }
+      }
+    }
+  },
+  "required": [
+    "name",
+    "type",
+    "classes"
+  ]
+}
