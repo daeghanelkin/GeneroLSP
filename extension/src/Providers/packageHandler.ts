@@ -1,14 +1,20 @@
 import * as vscode from "vscode";
-import generoPackages from "./4GLPackages.json";
+//import generoPackages from "./4GLPackages.json";
+import base from "../Resources/built-in_base.4GLPackage.json";
+import dataTypes from "../Resources/built-in_dataTypes.4GLPackage.json";
+import ui from "../Resources/built-in_ui.4GLPackage.json";
+import com from "../Resources/external_com.4GLPackage.json";
+import os from "../Resources/external_os.4GLPackage.json";
+import security from "../Resources/external_security.4GLPackage.json";
+import util from "../Resources/external_util.4GLPackage.json";
+import xml from "../Resources/external_xml.4GLPackage.json";
 
 interface Package extends Info {
-    package: string;
     type: string;
     classes: PackageClass[]
 }
 
 interface PackageClass extends Info {
-    class: string;
     objectMethods?: Method[];
     classMethods?: Method[];
 }
@@ -20,6 +26,7 @@ interface Method extends Info {
 }
 
 interface Info {
+    name: string;
     description?: string;
     documentation?: string;
     minimumLanguageVersion?: string;

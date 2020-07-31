@@ -1,5 +1,5 @@
 import * as vscode from "vscode";
-import keywords from "./4GLKeywords.json";
+//import keywords from "../Resources/4GLKeywords.json";
 import { getImportList } from "./importHandler";
 import { parsePackageClasses } from "./packageHandler";
 
