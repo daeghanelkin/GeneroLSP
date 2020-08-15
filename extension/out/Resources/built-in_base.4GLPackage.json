@@ -1,0 +1,28 @@
+{
+    "$schema": "./GeneroPackageSchema.json",
+    "name": "base",
+    "type": "built-in",
+    "classes": [
+        {
+            "name": "Application"
+        },
+        {
+            "name": "Channel"
+        },
+        {
+            "name": "SqlHandler"
+        },
+        {
+            "name": "StringBuffer"
+        },
+        {
+            "name": "StringTokenizer"
+        },
+        {
+            "name": "TypeInfo"
+        },
+        {
+            "name": "MessageServer"
+        }
+    ]
+}

@@ -83,6 +83,13 @@
         "description": {
           "description": "Description of the parameter",
           "type": "string"
+        },
+        "recordMembers": {
+          "type": "array",
+          "description": "Members of the record parameter",
+          "items": {
+            "$ref": "#/definitions/member"
+          }
         }
       },
       "required": [
@@ -162,6 +169,24 @@
           "description": "Maximum Genero version the package/class/method is available in",
           "type": "string",
           "default": "latest"
+        }
+      }
+    },
+    "member": {
+      "type": "object",
+      "description": "Record member",
+      "properties": {
+        "name": {
+          "description": "Member name",
+          "type": "string"
+        },
+        "type": {
+          "description": "Member data type",
+          "type": "string"
+        },
+        "description": {
+          "description": "Description of the member",
+          "type": "string"
         }
       }
     }

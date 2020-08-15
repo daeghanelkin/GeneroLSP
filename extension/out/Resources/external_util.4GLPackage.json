@@ -1,0 +1,6 @@
+{
+    "$schema": "./GeneroPackageSchema.json",
+    "name": "util",
+    "type": "external",
+    "classes": []
+}

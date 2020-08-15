@@ -1,6 +1,6 @@
 {
   "$schema": "./GeneroPackageSchema.json",
-  "package": "security",
+  "name": "security",
   "type": "external",
   "classes": [
 

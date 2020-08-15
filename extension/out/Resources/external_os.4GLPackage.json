@@ -1,0 +1,27 @@
+{
+    "$schema": "./GeneroPackageSchema.json",
+    "name": "os",
+    "type": "external",
+    "description": "",
+    "documentation": "c_fgl_Class_os.html",
+    "minimumLanguageVersion": "none",
+    "maximumLanguageVersion": "latest",
+    "classes": [
+        {
+            "name": "Path",
+            "description": "The os.Path class provides functions to manipulate files and directories on the machine where the program executes.",
+            "documentation": "c_fgl_ext_os_path_001.html",
+            "minimumLanguageVersion": "none",
+            "maximumLanguageVersion": "latest",
+            "classMethods": [
+                {
+                    "name": "atime",
+                    "description": "Returns the time of the last file access.",
+                    "documentation": "c_fgl_ext_os_path_atime.html",
+                    "minimumLanguageVersion": "none",
+                    "maximumLanguageVersion": "latest"
+                }
+            ]
+        }
+    ]
+}
