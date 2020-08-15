@@ -1,17 +1,30 @@
 "use strict";
+var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    Object.defineProperty(o, k2, { enumerable: true, get: function() { return m[k]; } });
+}) : (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    o[k2] = m[k];
+}));
+var __setModuleDefault = (this && this.__setModuleDefault) || (Object.create ? (function(o, v) {
+    Object.defineProperty(o, "default", { enumerable: true, value: v });
+}) : function(o, v) {
+    o["default"] = v;
+});
 var __importStar = (this && this.__importStar) || function (mod) {
     if (mod && mod.__esModule) return mod;
     var result = {};
-    if (mod != null) for (var k in mod) if (Object.hasOwnProperty.call(mod, k)) result[k] = mod[k];
-    result["default"] = mod;
+    if (mod != null) for (var k in mod) if (k !== "default" && Object.hasOwnProperty.call(mod, k)) __createBinding(result, mod, k);
+    __setModuleDefault(result, mod);
     return result;
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 const vscode = __importStar(require("vscode"));
-const importHandler_1 = require("./importHandler");
-const packageHandler_1 = require("./packageHandler");
+//import keywords from "../Resources/4GLKeywords.json";
+const importHandler_1 = require("../Handlers/importHandler");
+const packageHandler_1 = require("../Handlers/packageHandler");
 class GoCompletionProvider {
-    provideCompletionItems(document, position) {
+    provideCompletionItems(document, position, token, context) {
         return new Promise((resolve, reject) => {
             let completions = [];
             /*
@@ -29,9 +42,11 @@ class GoCompletionProvider {
             });
             */
             let importList = importHandler_1.getImportList(document);
+            importList.push({ name: "dataTypes" }, { name: "base" }, { name: "ui" });
+            let importPackages = packageHandler_1.parsePackageClasses(importList);
             // Append built-in classes
-            importList.push("dataTypes", "base", "ui");
-            resolve(completions.concat(packageHandler_1.parsePackageClasses(importList, document, position)));
+            completions = importHandler_1.importCompletion(document, position, importPackages);
+            resolve(completions);
         });
     }
 }

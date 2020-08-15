@@ -1,8 +1,14 @@
 import * as vscode from "vscode";
+
+export interface ImportType {
+    type?: string;
+    name: string;
+}
+
 export function getImportList(document: vscode.TextDocument) {
-    let importList: Array<string> = [];
+    let importList: ImportType[] = [];
     let commentBlock: boolean = false;
-    let endImports: RegExp = new RegExp("^(public|private|define|type|constant|function|main|report|options)\\b", "i");
+    let endImports: RegExp = new RegExp("^\\s*(public|private|define|type|constant|function|main|report|options|&define|&include)\\b", "i");
     let commentPosition: number = -1;
     let importSection: string = "";
 
@@ -66,12 +72,34 @@ export function getImportList(document: vscode.TextDocument) {
         }
         let words: Array<string> = element.split(" ");
         if (words[0].toLowerCase() == "fgl" || words[0].toLowerCase() == "java") {
-            importList.push(words[1]);
+            importList.push({type: words[0], name: words[1]});
         }
         else {
-            importList.push(words[0]);
+            importList.push({name: words[0]});
         }
     });
 
     return importList;
+}
+
+export function importCompletion(document: vscode.TextDocument, position: vscode.Position, imports: ImportType[]) {
+    let completions: vscode.CompletionItem[] = [];
+    let fullDoc: string = document.getText(new vscode.Range(new vscode.Position(0,0), position));
+    let positionOffset: number = document.offsetAt(position);
+    let tokenized: string[] = [];
+    // Ignore blank values
+    fullDoc.split(" ").forEach(token => {
+        if (token.length == 0) {
+            return;
+        }
+        tokenized.push(token);
+    });
+    tokenized.reverse();
+    tokenized.forEach(token => {
+        if (token[0] != '.') {
+            let desiredWord = token;
+        }
+
+    });
+    return completions;
 }

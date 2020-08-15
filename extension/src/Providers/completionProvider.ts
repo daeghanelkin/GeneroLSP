@@ -1,10 +1,10 @@
 import * as vscode from "vscode";
 //import keywords from "../Resources/4GLKeywords.json";
-import { getImportList } from "./importHandler";
-import { parsePackageClasses } from "./packageHandler";
+import { getImportList, importCompletion, ImportType } from "../Handlers/importHandler";
+import { parsePackageClasses, Package } from "../Handlers/packageHandler";
 
 export default class GoCompletionProvider implements vscode.CompletionItemProvider {
-    public provideCompletionItems(document: vscode.TextDocument, position: vscode.Position): Thenable<vscode.CompletionItem[]> {
+    public provideCompletionItems(document: vscode.TextDocument, position: vscode.Position, token: vscode.CancellationToken, context: vscode.CompletionContext): Thenable<vscode.CompletionItem[]> {
         return new Promise((resolve, reject) => {
             let completions: vscode.CompletionItem[] = [];
             /*
@@ -22,11 +22,15 @@ export default class GoCompletionProvider implements vscode.CompletionItemProvid
             });
             */
 
-            let importList: string[] = getImportList(document);
-            // Append built-in classes
-            importList.push("dataTypes", "base", "ui");
+            let importList: ImportType[] = getImportList(document);
+            importList.push({name: "dataTypes"}, {name: "base"}, {name: "ui"});
 
-            resolve(completions.concat(parsePackageClasses(importList, document, position)));
+            let importPackages: Package[] = parsePackageClasses(importList);
+
+            // Append built-in classes
+            completions = importCompletion(document, position, importPackages);
+
+            resolve(completions);
         });
     }
 

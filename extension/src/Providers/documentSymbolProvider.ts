@@ -41,7 +41,7 @@ export default class GoDocumentSymbolProvider implements vscode.DocumentSymbolPr
 
                 if (match != null) {
                     let endLine = currentLine.lineNumber;
-                    symbols.push(new vscode.DocumentSymbol(name, '', kind, new vscode.Range(startLine, 0, endLine, 0), selectRange));
+                    symbols.push(new vscode.DocumentSymbol(name, '', kind, new vscode.Range(startLine, 0, endLine, currentLine.text.length), selectRange));
                     continue;
                 }
             }

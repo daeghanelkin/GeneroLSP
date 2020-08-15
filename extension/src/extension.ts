@@ -15,5 +15,5 @@ function registerLanguageFeatures() {
     //languages.registerHoverProvider({scheme: 'file', language: 'genero 4gl'}, new GoHoverProvider());
     languages.registerDocumentSymbolProvider({scheme: 'file', language: 'genero 4gl'}, new GoDocumentSymbolProvider());
     //languages.registerDocumentSymbolProvider({scheme: 'file', language: 'genero 4gl'}, new GoWorkspaceSymbolProvider());
-    languages.registerCompletionItemProvider({scheme: 'file', language: 'genero 4gl'}, new GoCompletionProvider());
+    languages.registerCompletionItemProvider({scheme: 'file', language: 'genero 4gl'}, new GoCompletionProvider(), '.');
 }
