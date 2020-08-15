@@ -933,14 +933,69 @@
       "end": "(?i)((?=(?:^\\s*(?:private|public|type|constant|function|report|main|type|define|let|initialize|call|if|case|while|for|prepare|declare|execute|open|fetch|close|select|insert|update|options|whenever|defer)\\b)))"
     },
     "Macros": {
-      "name": "meta.macro.4gl",
-      "begin": "(?i)^\\s*(&define)",
-      "beginCaptures": {
-        "1": {
-          "name": "keyword.control.4gl"
+      "patterns":[
+        {
+          "name": "meta.preprocessor.macro.simple.4gl",
+          "comment": "Simple Macro",
+          "begin": "(?i)^\\s*(&define)\\s+(\\w+)\\b(?!\\()",
+          "beginCaptures": {
+            "1": {
+              "name": "keyword.control.4gl"
+            },
+            "2": {
+              "name": "meta.definition.macro.simple.4gl entity.name.macro.simple.4gl"
+            }
+          },
+          "patterns": [
+            {
+              "include": "#Strings"
+            },
+            {
+              "name": "punctuation.macro.continuation.4gl",
+              "match": "\\\\"
+            }
+          ],
+          "end": "(?<!\\\\\\s*)$"
+        },
+        {
+          "name": "meta.preprocessor.macro.function.4gl",
+          "comment": "Function Macro",
+          "begin": "(?i)^\\s*(&define)\\s+(\\w+)\\b(\\(.*\\))",
+          "beginCaptures": {
+            "1": {
+              "name": "keyword.control.4gl"
+            },
+            "2": {
+              "name": "meta.definition.macro.function.4gl entity.name.macro.function.4gl"
+            },
+            "3": {
+              "name": "meta.parameters.4gl",
+              "begin": "\\(",
+              "beginCaptures": {
+                "0": {
+                  "name": "punctuation.definition.parameters.4gl"
+                }
+              },
+              "end": "\\)",
+              "endCaptures": {
+                "0": {
+                  "name": "punctuation.definition.parameters.4gl"
+                }
+              }
+            }
+          },
+          "patterns": [
+            {
+              "include": "#Strings"
+            },
+            {
+              "name": "punctuation.macro.continuation.4gl",
+              "match": "\\\\"
+            }
+          ],
+          "end": "(?<!\\\\\\s*)$"
         }
-      },
-      "end": "((?=(?:(?<!\\\\\\s*)$)))"
+      ]
     }
   },
   "scopeName": "source.4gl"
